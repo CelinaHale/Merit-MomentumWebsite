@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn about Merit & Momentum Recruiting, our philosophy, and our approach to connecting employers with capable talent.">
+
+  <meta name="description" content="Learn about Merit & Momentum Recruiting, our commitment to meaningful employment opportunities, and our approach to direct hire recruiting throughout Arkansas.">
+
   <title>About Us | Merit & Momentum Recruiting</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,14 +15,17 @@
 
   <style>
     :root {
-      --cream: #eee9e1;
-      --light: #f7f3ed;
+      --paper: #eae5dd;
+      --milk: #f6f2eb;
       --taupe: #c8beb3;
+      --ink: #342b26;
       --brown: #6b4b34;
-      --dark: #3f2c20;
-      --copper: #a7653d;
-      --muted: #6f6055;
-      --border: #d8cdc2;
+      --bronze: #92694e;
+      --muted: #776b62;
+      --night: #302823;
+      --line: #c9beb2;
+      --serif: "Libre Caslon Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
     }
 
     * {
@@ -33,10 +38,11 @@
 
     body {
       margin: 0;
-      background: var(--cream);
-      color: var(--dark);
-      font-family: "DM Sans", sans-serif;
-      line-height: 1.7;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -45,102 +51,155 @@
     }
 
     a:focus-visible {
-      outline: 2px solid var(--copper);
-      outline-offset: 5px;
+      outline: 2px solid var(--bronze);
+      outline-offset: 4px;
     }
 
     img {
       display: block;
-      width: 100%;
+      max-width: 100%;
     }
 
-    .shell {
+    .wrap {
       width: min(1200px, calc(100% - 80px));
-      margin: auto;
+      margin: 0 auto;
     }
 
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .18em;
+    .caps {
+      color: var(--bronze);
       font-size: 11px;
       font-weight: 600;
-      color: var(--copper);
-      margin-bottom: 24px;
+      letter-spacing: .17em;
+      text-transform: uppercase;
     }
 
     h1, h2, h3 {
-      font-family: "Libre Caslon Display", serif;
+      font-family: var(--serif);
       font-weight: 400;
       letter-spacing: -.025em;
     }
 
-    header {
-      min-height: 92px;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
+    .text-link {
+      display: inline-block;
+      font-size: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid currentColor;
+      transition: color .2s ease;
     }
 
-    .header-row {
+    .text-link:hover {
+      color: var(--bronze);
+    }
+
+    /* SHARED BRAND HEADER */
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .topbar {
+      min-height: 112px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      align-items: center;
+      gap: 28px;
     }
 
     .brand {
-      font-family: "Libre Caslon Display", serif;
-      font-size: 19px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 116px;
+      height: 88px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .brand-text strong {
+      font: 400 21px/1.15 var(--serif);
+      color: var(--ink);
+    }
+
+    .brand-text small {
+      font-size: 9px;
+      letter-spacing: .22em;
+      font-weight: 600;
+      color: var(--bronze);
     }
 
     nav {
       display: flex;
-      gap: 32px;
       align-items: center;
-      font-size: 13px;
+      gap: clamp(18px, 3vw, 46px);
+      flex-wrap: wrap;
     }
 
-    nav a:hover {
-      color: var(--copper);
+    nav a {
+      font-size: 13px;
+      padding: 8px 0;
+      white-space: nowrap;
     }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--bronze);
+    }
+
+    /* PAGE INTRODUCTION */
 
     .page-intro {
-      padding: 110px 0 100px;
-      max-width: 960px;
+      padding: 105px 0 100px;
+      max-width: 1000px;
     }
 
     .page-intro h1 {
       font-size: clamp(62px, 7.5vw, 108px);
       line-height: 1.02;
-      margin: 0 0 35px;
-      max-width: 930px;
+      margin: 23px 0 35px;
+      max-width: 940px;
     }
 
     .page-intro p {
       font-size: 19px;
-      line-height: 1.8;
+      line-height: 1.85;
       color: var(--muted);
-      max-width: 740px;
+      max-width: 750px;
       margin: 0;
     }
 
+    /* FEATURE PHOTOGRAPH */
+
     .image-feature {
-      height: 590px;
-      overflow: hidden;
+      height: 560px;
       background: #8e8176;
+      overflow: hidden;
     }
 
     .image-feature img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
     }
 
+    /* WHY WE EXIST */
+
     .story {
-      padding: 135px 0;
+      padding: 130px 0;
       display: grid;
       grid-template-columns: .85fr 1.15fr;
-      gap: 125px;
+      gap: 115px;
       align-items: start;
     }
 
@@ -148,36 +207,43 @@
       font-size: clamp(50px, 5vw, 75px);
       line-height: 1.08;
       color: var(--brown);
-      margin: 0;
+      margin: 15px 0 0;
     }
 
     .story-copy {
-      padding-top: 40px;
+      padding-top: 45px;
       color: var(--muted);
       font-size: 17px;
+      line-height: 1.85;
     }
 
     .story-copy p {
       margin: 0 0 26px;
     }
 
+    /* OUR PHILOSOPHY */
+
     .perspective {
-      background: var(--dark);
-      color: #f7f3ed;
+      background: var(--night);
+      color: var(--milk);
       padding: 125px 0;
     }
 
     .perspective-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 120px;
+      gap: 115px;
       align-items: center;
+    }
+
+    .perspective .caps {
+      color: #cfa27e;
     }
 
     .perspective h2 {
       font-size: clamp(52px, 5.5vw, 82px);
       line-height: 1.07;
-      margin: 0;
+      margin: 18px 0 0;
     }
 
     .perspective p {
@@ -187,36 +253,34 @@
       margin: 0 0 24px;
     }
 
-    .perspective .eyebrow {
-      color: #cfa27e;
-    }
+    /* OUR APPROACH */
 
     .principles {
-      padding: 135px 0;
+      padding: 130px 0;
     }
 
     .principles-heading {
-      max-width: 740px;
-      margin-bottom: 70px;
+      max-width: 760px;
+      margin-bottom: 65px;
     }
 
     .principles-heading h2 {
       font-size: clamp(50px, 5vw, 76px);
       line-height: 1.1;
       color: var(--brown);
-      margin: 0;
+      margin: 20px 0 0;
     }
 
     .principle {
       display: grid;
       grid-template-columns: .7fr 1.3fr;
       gap: 65px;
-      border-top: 1px solid #cfc2b6;
+      border-top: 1px solid var(--line);
       padding: 38px 0 44px;
     }
 
     .principle:last-child {
-      border-bottom: 1px solid #cfc2b6;
+      border-bottom: 1px solid var(--line);
     }
 
     .principle h3 {
@@ -232,13 +296,15 @@
       margin: 0;
     }
 
+    /* EMPLOYER AND CANDIDATE PATHWAYS */
+
     .audiences {
-      background: var(--light);
+      background: var(--milk);
       padding: 125px 0;
     }
 
     .audiences-intro {
-      max-width: 720px;
+      max-width: 750px;
       margin-bottom: 65px;
     }
 
@@ -246,7 +312,7 @@
       font-size: clamp(48px, 5vw, 75px);
       line-height: 1.1;
       color: var(--brown);
-      margin: 0;
+      margin: 20px 0 0;
     }
 
     .audiences-grid {
@@ -256,7 +322,7 @@
     }
 
     .audience {
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--line);
       padding-top: 34px;
     }
 
@@ -272,16 +338,7 @@
       max-width: 490px;
     }
 
-    .text-link {
-      display: inline-block;
-      font-size: 14px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid currentColor;
-    }
-
-    .text-link:hover {
-      color: var(--copper);
-    }
+    /* CLOSING */
 
     .closing {
       text-align: center;
@@ -292,32 +349,57 @@
       font-size: clamp(50px, 6vw, 83px);
       line-height: 1.1;
       max-width: 860px;
-      margin: 0 auto 30px;
+      margin: 20px auto 30px;
     }
 
     .closing p {
       color: var(--muted);
       max-width: 660px;
-      margin: auto;
+      margin: 0 auto 32px;
       font-size: 17px;
     }
 
+    /* FOOTER */
+
     footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 0;
-      font-size: 12px;
-      color: var(--muted);
+      background: var(--night);
+      color: #c6b9ad;
     }
 
     .footer-row {
+      padding: 30px 0;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 25px;
+      flex-wrap: wrap;
+      font-size: 12px;
     }
 
-    @media(max-width: 900px) {
-      .shell {
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 23px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+      .wrap {
         width: min(100% - 40px, 1200px);
+      }
+
+      .topbar {
+        flex-wrap: wrap;
+        padding: 20px 0;
+      }
+
+      nav {
+        width: 100%;
       }
 
       .story,
@@ -354,19 +436,33 @@
       }
     }
 
-    @media(max-width: 600px) {
-      header {
-        padding: 24px 0;
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+      .wrap {
+        width: calc(100% - 36px);
       }
 
-      .header-row {
-        flex-direction: column;
-        align-items: flex-start;
+      .brand-logo {
+        width: 88px;
+        height: 68px;
+      }
+
+      .brand-text strong {
+        font-size: 17px;
+      }
+
+      .brand-text small {
+        font-size: 8px;
       }
 
       nav {
-        flex-wrap: wrap;
-        gap: 16px 25px;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 12px;
       }
 
       .page-intro p,
@@ -386,61 +482,106 @@
 
       .footer-row {
         flex-direction: column;
+        align-items: flex-start;
       }
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- SHARED HEADER -->
+
   <header>
-    <div class="shell header-row">
-      <a href="index.html" class="brand">
-        Merit & Momentum Recruiting
+    <div class="wrap topbar">
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Merit and Momentum Recruiting homepage"
+      >
+
+        <img
+          class="brand-logo"
+          src="merit-momentum-logo.png"
+          alt="Merit & Momentum Recruiting logo"
+          width="116"
+          height="88"
+        >
+
+        <span class="brand-text">
+          <strong>Merit &amp; Momentum</strong>
+          <small>RECRUITING</small>
+        </span>
+
       </a>
 
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="employers.html">Employers</a>
-        <a href="candidates.html">Candidates</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <main>
 
-    <section class="shell page-intro">
-      <div class="eyebrow">About Merit & Momentum</div>
+    <!-- INTRODUCTION -->
 
-      <h1>We believe good recruiting starts with better judgment.</h1>
+    <section class="wrap page-intro">
+
+      <span class="caps">
+        About Merit &amp; Momentum
+      </span>
+
+      <h1>
+        We believe good recruiting starts with better judgment.
+      </h1>
 
       <p>
-        Merit & Momentum Recruiting is being built around
+        Merit &amp; Momentum Recruiting is being built around
         a straightforward idea: employers deserve to understand
         the talent available to them, and candidates deserve
         to have their qualifications meaningfully considered.
       </p>
+
     </section>
 
-    <section class="shell image-feature">
+    <!-- FEATURE PHOTOGRAPH -->
+
+    <div class="wrap image-feature">
+
       <img
         src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=88"
         alt="Warm, contemporary professional workspace"
       >
-    </section>
 
-    <section class="shell story">
+    </div>
+
+    <!-- WHY WE EXIST -->
+
+    <section class="wrap story">
+
       <div>
-        <div class="eyebrow">Why we're here</div>
 
-        <h2>The way we evaluate people shapes the opportunities we create.</h2>
+        <span class="caps">
+          Why we're here
+        </span>
+
+        <h2>
+          The way we evaluate people shapes the opportunities we create.
+        </h2>
+
       </div>
 
       <div class="story-copy">
+
         <p>
-          Hiring decisions carry real consequences. For
-          employers, a poor match affects operations,
+          Hiring decisions carry real consequences.
+          For employers, a poor match affects operations,
           productivity, and the people already on the team.
           For candidates, being overlooked can mean losing
           an opportunity to contribute, advance, and build
@@ -457,25 +598,39 @@
         </p>
 
         <p>
-          Merit & Momentum Recruiting is developing a
-          more thoughtful approach to connecting people
+          Merit &amp; Momentum Recruiting is developing
+          a more thoughtful approach to connecting people
           and businesses. We believe recruiters should
           understand what the work demands, what a
           candidate can contribute, and where those
           expectations genuinely align.
         </p>
+
       </div>
+
     </section>
 
-    <section class="perspective">
-      <div class="shell perspective-layout">
-        <div>
-          <div class="eyebrow">Our philosophy</div>
+    <!-- OUR PHILOSOPHY -->
 
-          <h2>Potential deserves consideration. Performance still matters.</h2>
+    <section class="perspective">
+
+      <div class="wrap perspective-layout">
+
+        <div>
+
+          <span class="caps">
+            Our philosophy
+          </span>
+
+          <h2>
+            Potential deserves consideration.
+            Performance still matters.
+          </h2>
+
         </div>
 
         <div>
+
           <p>
             An effective hiring process should be fair,
             practical, and grounded in the requirements
@@ -497,42 +652,61 @@
             is examined carefully, and decisions are
             made with professional judgment.
           </p>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="shell principles">
-      <div class="principles-heading">
-        <div class="eyebrow">How we intend to work</div>
+    <!-- OUR APPROACH -->
 
-        <h2>Thoughtful recruiting requires substance behind the conversation.</h2>
+    <section class="wrap principles">
+
+      <div class="principles-heading">
+
+        <span class="caps">
+          How we intend to work
+        </span>
+
+        <h2>
+          Thoughtful recruiting requires substance
+          behind the conversation.
+        </h2>
+
       </div>
 
       <div class="principle">
+
         <h3>Understand the workplace.</h3>
 
         <p>
-          Before considering a candidate, we want to
-          understand the employer's actual needs,
+          Before considering a candidate, we want
+          to understand the employer's actual needs,
           responsibilities, working conditions, and
           expectations. A useful recommendation starts
           with knowing what successful performance
           looks like in that environment.
         </p>
+
       </div>
 
       <div class="principle">
+
         <h3>Recognize relevant ability.</h3>
 
         <p>
           Experience takes many forms. We intend to
           consider practical skills, previous responsibilities,
-          training, communication, and transferable strengths
-          alongside the qualifications a position requires.
+          training, communication, and transferable
+          strengths alongside the qualifications
+          a position requires.
         </p>
+
       </div>
 
       <div class="principle">
+
         <h3>Respect informed decisions.</h3>
 
         <p>
@@ -543,9 +717,11 @@
           communication and appropriate consideration
           of both parties' needs.
         </p>
+
       </div>
 
       <div class="principle">
+
         <h3>Build professional relationships.</h3>
 
         <p>
@@ -555,19 +731,33 @@
           transparency, and a realistic understanding
           of what each opportunity requires.
         </p>
+
       </div>
+
     </section>
 
-    <section class="audiences">
-      <div class="shell">
-        <div class="audiences-intro">
-          <div class="eyebrow">Working with us</div>
+    <!-- EMPLOYERS AND CANDIDATES -->
 
-          <h2>Two perspectives. One better hiring conversation.</h2>
+    <section class="audiences">
+
+      <div class="wrap">
+
+        <div class="audiences-intro">
+
+          <span class="caps">
+            Working with us
+          </span>
+
+          <h2>
+            Two perspectives. One better hiring conversation.
+          </h2>
+
         </div>
 
         <div class="audiences-grid">
+
           <div class="audience">
+
             <h3>For employers</h3>
 
             <p>
@@ -578,51 +768,106 @@
               support could fit your business.
             </p>
 
-            <a href="employers.html" class="text-link">
+            <a
+              href="employers.html"
+              class="text-link"
+            >
               Discuss your hiring needs
             </a>
+
           </div>
 
           <div class="audience">
+
             <h3>For candidates</h3>
 
             <p>
               If you're exploring your next professional
-              opportunity, we'd like to learn about
-              your experience, strengths, and career
-              interests. You can introduce yourself
-              without needing a particular job opening
-              to begin the conversation.
+              opportunity, we'd like to learn about your
+              experience, strengths, and career interests.
+              You can introduce yourself without needing
+              a particular job opening to begin
+              the conversation.
             </p>
 
-            <a href="candidates.html" class="text-link">
+            <a
+              href="candidates.html"
+              class="text-link"
+            >
               Introduce yourself
             </a>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="shell closing">
-      <div class="eyebrow">Merit & Momentum Recruiting</div>
+    <!-- CLOSING -->
 
-      <h2>Good opportunities begin with understanding what's possible.</h2>
+    <section class="wrap closing">
+
+      <span class="caps">
+        Merit &amp; Momentum Recruiting
+      </span>
+
+      <h2>
+        Good opportunities begin with understanding
+        what's possible.
+      </h2>
 
       <p>
-        We're developing a recruiting approach that
-        takes employers' needs seriously while making
-        room for a more complete understanding of
-        the people prepared to meet them.
+        We're developing a recruiting approach that takes
+        employers' needs seriously while making room
+        for a more complete understanding of the
+        people prepared to meet them.
       </p>
+
+      <a
+        href="contact.html"
+        class="text-link"
+      >
+        Contact Merit &amp; Momentum
+      </a>
+
     </section>
 
   </main>
 
+  <!-- SHARED FOOTER -->
+
   <footer>
-    <div class="shell footer-row">
-      <span>© 2026 Merit & Momentum Recruiting</span>
-      <span>Professional recruiting grounded in merit and opportunity.</span>
+
+    <div class="wrap footer-row">
+
+      <span>
+        © 2026 MERIT &amp; MOMENTUM RECRUITING
+      </span>
+
+      <div class="footer-links">
+
+        <a href="services.html">
+          Services &amp; Pricing
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+
+      </div>
+
+      <span>
+        ARKANSAS / DIRECT HIRE
+      </span>
+
     </div>
+
   </footer>
 
 </body>
