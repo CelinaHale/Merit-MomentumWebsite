@@ -2,235 +2,621 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Employer Inquiries | Merit & Momentum Recruiting</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    :root {
-      --cream: #eee9e1;
-      --light: #f7f3ed;
-      --brown: #6b4b34;
-      --dark: #3f2c20;
-      --copper: #a7653d;
-      --muted: #76665a;
-    }
+<meta name="description" content="Request direct hire recruiting support from Merit & Momentum Recruiting. Helping Arkansas employers connect with qualified candidates.">
 
-    * { box-sizing: border-box; }
+<title>Employer Hiring Inquiry | Merit & Momentum Recruiting</title>
 
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--dark);
-      font-family: "DM Sans", sans-serif;
-      line-height: 1.65;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
 
-    a { color: inherit; text-decoration: none; }
+<style>
+:root {
+  --paper:#eae5dd;
+  --milk:#f6f2eb;
+  --taupe:#c8beb3;
+  --ink:#342b26;
+  --brown:#6b4b34;
+  --bronze:#92694e;
+  --muted:#776b62;
+  --night:#302823;
+  --line:#c9beb2;
+  --serif:"Libre Caslon Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
 
-    .shell {
-      width: min(1100px, calc(100% - 48px));
-      margin: auto;
-    }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 
-    header {
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid #d8cdc2;
-    }
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
 
-    .header-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
+a { color:inherit; text-decoration:none; }
 
-    .brand {
-      font-family: "Libre Caslon Display", serif;
-      font-size: 20px;
-    }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline:2px solid var(--bronze);
+  outline-offset:3px;
+}
 
-    .back {
-      font-size: 13px;
-      border-bottom: 1px solid var(--dark);
-    }
+img { display:block; max-width:100%; }
 
-    .intro {
-      max-width: 780px;
-      margin: 90px auto 65px;
-      text-align: center;
-    }
+.wrap {
+  width:min(1200px,calc(100% - 80px));
+  margin:auto;
+}
 
-    .eyebrow {
-      color: var(--copper);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
+.caps {
+  display:inline-block;
+  color:var(--bronze);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
 
-    h1, h2 {
-      font-family: "Libre Caslon Display", serif;
-      font-weight: 400;
-    }
+h1,h2,h3 {
+  font-family:var(--serif);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.025em;
+}
 
-    h1 {
-      font-size: clamp(52px, 7vw, 82px);
-      line-height: 1.05;
-      margin: 0 0 24px;
-      letter-spacing: -.025em;
-    }
+/* SHARED HEADER */
 
-    .intro p {
-      font-size: 16px;
-      color: var(--muted);
-      max-width: 650px;
-      margin: auto;
-    }
+header {
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+}
 
-    .form-area {
-      background: var(--light);
-      padding: 65px 75px 75px;
-      margin-bottom: 100px;
-    }
+.topbar {
+  min-height:112px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:28px;
+}
 
-    .form-heading {
-      border-bottom: 1px solid #d8cdc2;
-      margin-bottom: 38px;
-      padding-bottom: 28px;
-    }
+.brand {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-width:0;
+}
 
-    h2 {
-      font-size: 40px;
-      margin: 0;
-    }
+.brand-logo {
+  width:116px;
+  height:88px;
+  object-fit:contain;
+  flex-shrink:0;
+}
 
-    .form-heading p {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 10px 0 0;
-    }
+.brand-text {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
 
-    .row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
+.brand-text strong {
+  font:400 21px/1.15 var(--serif);
+}
 
-    .field { margin-bottom: 27px; }
+.brand-text small {
+  font-size:9px;
+  letter-spacing:.22em;
+  font-weight:600;
+  color:var(--bronze);
+}
 
-    label {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 9px;
-    }
+nav {
+  display:flex;
+  align-items:center;
+  gap:clamp(18px,3vw,46px);
+  flex-wrap:wrap;
+}
 
-    input, select, textarea {
-      width: 100%;
-      border: 1px solid #cec4b9;
-      background: #fffdfa;
-      padding: 15px 16px;
-      font: inherit;
-      font-size: 14px;
-      color: var(--dark);
-      border-radius: 0;
-    }
+nav a {
+  font-size:13px;
+  padding:8px 0;
+  white-space:nowrap;
+}
 
-    textarea {
-      min-height: 145px;
-      resize: vertical;
-    }
+nav a:hover { color:var(--bronze); }
 
-    input:focus, select:focus, textarea:focus {
-      outline: 2px solid var(--copper);
-      outline-offset: 2px;
-    }
+/* INTRO */
 
-    .privacy {
-      font-size: 13px;
-      color: var(--muted);
-      margin: 12px 0 28px;
-    }
+.intro {
+  padding:105px 0 95px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:85px;
+  align-items:end;
+}
 
-    .privacy label {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-weight: 400;
-    }
+.intro h1 {
+  font-size:clamp(60px,7vw,100px);
+  margin:20px 0 0;
+}
 
-    .privacy input {
-      width: auto;
-      margin-top: 5px;
-    }
+.intro p {
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.85;
+  margin:0;
+}
 
-    button {
-      appearance: none;
-      background: var(--dark);
-      color: white;
-      border: 1px solid var(--dark);
-      border-radius: 0;
-      padding: 17px 35px;
-      font: inherit;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background .2s;
-    }
+/* PHOTOGRAPH */
 
-    button:hover { background: var(--brown); }
+.photo {
+  height:440px;
+  overflow:hidden;
+  background:#a99a8d;
+}
 
-    footer {
-      border-top: 1px solid #d8cdc2;
-      padding: 30px 0;
-      font-size: 12px;
-      color: var(--muted);
-    }
+.photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    .honeypot { display: none; }
+/* BUSINESS MODEL */
 
-    @media(max-width: 700px) {
-      .row { grid-template-columns: 1fr; gap: 0; }
-      .form-area { padding: 35px 24px; }
-      .intro { margin: 65px auto 45px; }
-      .brand { font-size: 16px; }
-      .back { font-size: 12px; }
-      h2 { font-size: 34px; }
-    }
-  </style>
+.model {
+  padding:105px 0;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:95px;
+}
+
+.model h2 {
+  font-size:clamp(48px,5vw,70px);
+  color:var(--brown);
+  margin:20px 0 0;
+}
+
+.model-copy p {
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.9;
+  margin:0 0 25px;
+}
+
+.text-link {
+  display:inline-block;
+  font-size:14px;
+  border-bottom:1px solid currentColor;
+  padding-bottom:6px;
+}
+
+.text-link:hover { color:var(--bronze); }
+
+/* INQUIRY FORM */
+
+.form-section {
+  background:var(--milk);
+  padding:115px 0;
+  border-top:1px solid var(--line);
+}
+
+.form-layout {
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:90px;
+  align-items:start;
+}
+
+.form-heading h2 {
+  font-size:clamp(48px,5vw,70px);
+  color:var(--brown);
+  margin:20px 0 25px;
+}
+
+.form-heading p {
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.85;
+  margin:0 0 25px;
+}
+
+.form-box {
+  background:#fffdfa;
+  padding:45px 48px 50px;
+  border:1px solid var(--line);
+}
+
+.form-intro {
+  padding-bottom:26px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:34px;
+}
+
+.form-intro h3 {
+  font-size:37px;
+  margin:0 0 12px;
+}
+
+.form-intro p {
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.8;
+  margin:0;
+}
+
+.form-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.field {
+  margin-bottom:25px;
+}
+
+.field label {
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:9px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width:100%;
+  background:var(--milk);
+  color:var(--ink);
+  border:1px solid #cfc2b6;
+  border-radius:0;
+  padding:15px;
+  font:400 14px/1.5 var(--sans);
+}
+
+.field textarea {
+  min-height:155px;
+  resize:vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color:#91847a;
+}
+
+.form-divider {
+  border:0;
+  border-top:1px solid var(--line);
+  margin:12px 0 32px;
+}
+
+.consent {
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  font-size:13px;
+  line-height:1.8;
+  color:var(--muted);
+  margin:8px 0 30px;
+}
+
+.consent input {
+  width:auto;
+  margin-top:6px;
+  accent-color:var(--brown);
+}
+
+.consent a {
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.submit-button {
+  background:var(--night);
+  border:1px solid var(--night);
+  color:var(--milk);
+  font:500 14px var(--sans);
+  padding:18px 35px;
+  border-radius:0;
+  cursor:pointer;
+}
+
+.submit-button:hover { background:var(--brown); }
+
+.form-note {
+  color:var(--muted);
+  font-size:12px;
+  margin:22px 0 0;
+  line-height:1.7;
+}
+
+.honeypot {
+  position:absolute;
+  left:-9999px;
+  opacity:0;
+}
+
+/* CLOSING */
+
+.closing {
+  background:var(--taupe);
+  padding:95px 0;
+}
+
+.closing-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:85px;
+}
+
+.closing h2 {
+  font-size:clamp(43px,5vw,66px);
+  margin:20px 0 0;
+}
+
+.closing p {
+  font-size:16px;
+  color:#58483e;
+  line-height:1.9;
+  margin:0 0 25px;
+}
+
+/* SHARED FOOTER */
+
+footer {
+  background:var(--night);
+  color:#c6b9ad;
+}
+
+.footer-row {
+  padding:30px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+  flex-wrap:wrap;
+  font-size:12px;
+}
+
+.footer-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:23px;
+}
+
+.footer-links a:hover { color:white; }
+
+/* RESPONSIVE */
+
+@media(max-width:950px) {
+  .wrap { width:calc(100% - 40px); }
+
+  .topbar {
+    flex-wrap:wrap;
+    padding:20px 0;
+  }
+
+  nav { width:100%; }
+
+  .intro,
+  .model,
+  .form-layout,
+  .closing-grid {
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .intro { padding:80px 0; }
+
+  .photo { height:350px; }
+
+  .model,
+  .form-section,
+  .closing {
+    padding-top:80px;
+    padding-bottom:80px;
+  }
+
+  .form-heading { max-width:650px; }
+}
+
+@media(max-width:600px) {
+  .wrap { width:calc(100% - 36px); }
+
+  .brand-logo {
+    width:88px;
+    height:68px;
+  }
+
+  .brand-text strong { font-size:17px; }
+  .brand-text small { font-size:8px; }
+
+  nav {
+    justify-content:space-between;
+    gap:12px;
+  }
+
+  nav a { font-size:12px; }
+
+  .intro h1 { font-size:56px; }
+  .intro p { font-size:15px; }
+
+  .photo { height:260px; }
+
+  .form-box { padding:30px 22px; }
+
+  .form-row {
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .form-intro h3 { font-size:32px; }
+
+  .footer-row {
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="shell header-row">
-      <a class="brand" href="index.html">Merit & Momentum Recruiting</a>
-      <a class="back" href="index.html">Return to homepage</a>
-    </div>
-  </header>
 
-  <main class="shell">
-    <section class="intro">
-      <div class="eyebrow">For employers</div>
-      <h1>Let's talk about who you need to hire.</h1>
+<!-- SHARED HEADER -->
+
+<header>
+  <div class="wrap topbar">
+
+    <a class="brand" href="index.html"
+       aria-label="Merit and Momentum Recruiting homepage">
+
+      <img
+        class="brand-logo"
+        src="merit-momentum-logo.png"
+        alt="Merit & Momentum Recruiting logo"
+        width="116"
+        height="88"
+      >
+
+      <span class="brand-text">
+        <strong>Merit &amp; Momentum</strong>
+        <small>RECRUITING</small>
+      </span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- INTRODUCTION -->
+
+<section class="wrap intro">
+
+  <div>
+    <span class="caps">For employers</span>
+
+    <h1>Let's talk about who you need to hire.</h1>
+  </div>
+
+  <p>
+    Every workplace has different needs.
+    Tell us about your company, the positions
+    you're looking to fill, and what matters
+    most in your next hire. We'll use those
+    details to begin a conversation about
+    how Merit &amp; Momentum Recruiting
+    could support your business.
+  </p>
+
+</section>
+
+<!-- FEATURE PHOTOGRAPH -->
+
+<div class="wrap photo">
+  <img
+    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=85"
+    alt="Professionals collaborating in a workplace"
+  >
+</div>
+
+<!-- DIRECT HIRE EXPLANATION -->
+
+<section class="wrap model">
+
+  <div>
+    <span class="caps">How we work</span>
+
+    <h2>Find the right people without an ongoing staffing markup.</h2>
+  </div>
+
+  <div class="model-copy">
+
+    <p>
+      Merit &amp; Momentum Recruiting helps Arkansas
+      businesses find candidates for positions
+      they intend to fill directly. Your company
+      hires the employee, manages payroll, and
+      makes all final employment decisions.
+    </p>
+
+    <p>
+      We charge one agreed placement fee when
+      a candidate we've referred begins working.
+      Our standard fees range from $1,000 to $2,000
+      depending on the type of position, with
+      custom quotes available for specialized
+      and volume recruiting.
+    </p>
+
+    <p>
+      There's no fee simply to ask about
+      our services. We confirm the applicable
+      recruiting fee and service terms in writing
+      before beginning a search.
+    </p>
+
+    <a href="services.html" class="text-link">
+      Review our services and pricing
+    </a>
+
+  </div>
+
+</section>
+
+<!-- EMPLOYER INQUIRY FORM -->
+
+<section class="form-section" id="inquiry">
+
+  <div class="wrap form-layout">
+
+    <div class="form-heading">
+      <span class="caps">Employer inquiry</span>
+
+      <h2>Tell us about your hiring needs.</h2>
+
       <p>
-        Every workplace has different needs. Tell us about your
-        company, the positions you're looking to fill, and what
-        you're hoping to find in your next hire.
+        Complete the form to introduce your
+        company and the positions you need filled.
+        We'll review the information and contact
+        you about the next steps when appropriate.
       </p>
-    </section>
 
-    <section class="form-area">
-      <div class="form-heading">
-        <h2>Employer hiring inquiry</h2>
+      <p>
+        You can also reach us directly at
+        <a href="mailto:meritandmomentum@yahoo.com"
+           class="text-link">
+          meritandmomentum@yahoo.com
+        </a>
+      </p>
+
+    </div>
+
+    <div class="form-box">
+
+      <div class="form-intro">
+        <h3>Hiring inquiry</h3>
         <p>
-          Please complete the information below to begin
-          a conversation with Merit & Momentum Recruiting.
+          Fields marked with an asterisk are required.
+          Submitting an inquiry does not create
+          a recruiting agreement or an obligation
+          to hire.
         </p>
       </div>
 
@@ -238,77 +624,155 @@
         action="https://formspree.io/f/xqppwkjw"
         method="POST"
       >
+
         <input
           type="hidden"
           name="_subject"
           value="New Merit & Momentum Employer Inquiry"
         >
 
+        <input
+          type="hidden"
+          name="inquiry_type"
+          value="Employer hiring request"
+        >
+
         <div class="honeypot" aria-hidden="true">
-          <label for="website-check">Leave this field blank</label>
-          <input type="text" name="_gotcha" id="website-check"
-                 tabindex="-1" autocomplete="off">
+          <label for="website-check">Leave blank</label>
+          <input
+            id="website-check"
+            type="text"
+            name="_gotcha"
+            tabindex="-1"
+            autocomplete="off"
+          >
         </div>
 
-        <div class="row">
+        <div class="form-row">
+
           <div class="field">
-            <label for="company">Company name *</label>
-            <input id="company" name="company_name"
-                   type="text" required>
+            <label for="company">
+              Company name *
+            </label>
+
+            <input
+              id="company"
+              name="company_name"
+              type="text"
+              autocomplete="organization"
+              required
+            >
           </div>
 
           <div class="field">
-            <label for="contact">Contact person's name *</label>
-            <input id="contact" name="contact_name"
-                   type="text" required>
+            <label for="contact">
+              Contact person's name *
+            </label>
+
+            <input
+              id="contact"
+              name="contact_name"
+              type="text"
+              autocomplete="name"
+              required
+            >
           </div>
+
         </div>
 
-        <div class="row">
+        <div class="form-row">
+
           <div class="field">
-            <label for="email">Business email *</label>
-            <input id="email" name="email"
-                   type="email" required>
+            <label for="email">
+              Business email *
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            >
           </div>
 
           <div class="field">
-            <label for="phone">Phone number</label>
-            <input id="phone" name="phone"
-                   type="tel">
+            <label for="phone">
+              Phone number
+            </label>
+
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+            >
           </div>
+
         </div>
 
         <div class="field">
-          <label for="location">Hiring location *</label>
-          <input id="location" name="hiring_location"
-                 type="text"
-                 placeholder="City, state, or remote"
-                 required>
+          <label for="location">
+            Hiring location *
+          </label>
+
+          <input
+            id="location"
+            name="hiring_location"
+            type="text"
+            placeholder="City, state, or remote"
+            required
+          >
         </div>
+
+        <hr class="form-divider">
 
         <div class="field">
-          <label for="positions">What positions are you hiring for? *</label>
-          <input id="positions" name="positions"
-                 type="text"
-                 placeholder="Job titles or departments"
-                 required>
+          <label for="positions">
+            What positions are you hiring for? *
+          </label>
+
+          <input
+            id="positions"
+            name="positions"
+            type="text"
+            placeholder="Job titles or departments"
+            required
+          >
         </div>
 
-        <div class="row">
+        <div class="form-row">
+
           <div class="field">
-            <label for="openings">Number of openings *</label>
-            <select id="openings" name="number_of_openings" required>
+            <label for="openings">
+              Number of openings *
+            </label>
+
+            <select
+              id="openings"
+              name="number_of_openings"
+              required
+            >
               <option value="">Select one</option>
-              <option>1</option>
-              <option>2 to 5</option>
-              <option>6 to 10</option>
-              <option>More than 10</option>
+              <option value="1">1</option>
+              <option value="2 to 5">2 to 5</option>
+              <option value="6 to 10">6 to 10</option>
+              <option value="More than 10">
+                More than 10
+              </option>
             </select>
           </div>
 
           <div class="field">
-            <label for="timeline">Hiring timeline *</label>
-            <select id="timeline" name="hiring_timeline" required>
+            <label for="timeline">
+              Hiring timeline *
+            </label>
+
+            <select
+              id="timeline"
+              name="hiring_timeline"
+              required
+            >
               <option value="">Select one</option>
               <option>Immediately</option>
               <option>Within 30 days</option>
@@ -316,47 +780,135 @@
               <option>Exploring future hiring needs</option>
             </select>
           </div>
+
         </div>
 
         <div class="field">
-          <label for="arrangement">Type of hiring</label>
-          <select id="arrangement" name="hiring_type">
+          <label for="arrangement">
+            Type of employment
+          </label>
+
+          <select
+            id="arrangement"
+            name="hiring_type"
+          >
             <option value="">Select one</option>
             <option>Full time</option>
             <option>Part time</option>
-            <option>Seasonal</option>
+            <option>Seasonal direct hire</option>
             <option>Not sure yet</option>
           </select>
         </div>
 
         <div class="field">
-          <label for="details">Tell us more about your hiring needs</label>
-          <textarea id="details" name="additional_details"
-            placeholder="Describe the roles, required qualifications, pay range, workplace expectations, or anything else you'd like us to know."></textarea>
-        </div>
-
-        <div class="privacy">
-          <label>
-            <input type="checkbox" name="contact_consent"
-                   value="Agreed" required>
-            <span>
-              I understand that submitting this inquiry allows
-              Merit & Momentum Recruiting to contact me about
-              my company's hiring needs. Submitting an inquiry
-              does not create a recruiting agreement.
-            </span>
+          <label for="details">
+            Tell us more about your hiring needs
           </label>
+
+          <textarea
+            id="details"
+            name="additional_details"
+            placeholder="Describe the work, qualifications, expected pay range, schedule, or other details that would help us understand your needs."
+          ></textarea>
         </div>
 
-        <button type="submit">Submit hiring inquiry</button>
-      </form>
-    </section>
-  </main>
+        <label class="consent" for="consent">
 
-  <footer>
-    <div class="shell">
-      © 2026 Merit & Momentum Recruiting
+          <input
+            id="consent"
+            type="checkbox"
+            name="contact_consent"
+            value="Agreed"
+            required
+          >
+
+          <span>
+            I understand that Merit &amp; Momentum
+            Recruiting may contact me about my
+            company's hiring needs. Submitting
+            an inquiry does not create a recruiting
+            agreement. I have reviewed the
+            <a href="privacy.html">Privacy Policy</a>.
+          </span>
+
+        </label>
+
+        <button class="submit-button" type="submit">
+          Submit hiring inquiry
+        </button>
+
+        <p class="form-note">
+          We use Formspree to receive inquiries.
+          Please don't include Social Security
+          numbers, employee medical information,
+          or other sensitive personal records.
+        </p>
+
+      </form>
+
     </div>
-  </footer>
+
+  </div>
+
+</section>
+
+<!-- CLOSING -->
+
+<section class="closing">
+
+  <div class="wrap closing-grid">
+
+    <div>
+      <span class="caps">Merit &amp; Momentum Recruiting</span>
+
+      <h2>A hiring conversation is a good place to begin.</h2>
+    </div>
+
+    <div>
+      <p>
+        Whether you're hiring for one position
+        or planning to expand your workforce,
+        we're interested in learning about your
+        business and the people who could help
+        it succeed.
+      </p>
+
+      <a href="contact.html" class="text-link">
+        View all contact options
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- SHARED FOOTER -->
+
+<footer>
+
+  <div class="wrap footer-row">
+
+    <span>
+      © 2026 MERIT &amp; MOMENTUM RECRUITING
+    </span>
+
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <span>
+      ARKANSAS / DIRECT HIRE
+    </span>
+
+  </div>
+
+</footer>
+
 </body>
 </html>
