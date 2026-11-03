@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Contact Merit & Momentum Recruiting for direct hire recruiting, employment opportunities, and general questions.">
+<title>Contact | Merit & Momentum Recruiting</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #eae5dd;
+  --milk: #f6f2eb;
+  --ink: #342b26;
+  --muted: #776b62;
+  --bronze: #92694e;
+  --line: #c9beb2;
+  --night: #302823;
+  --serif: "Libre Caslon Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.75;
+}
+
+a { color: inherit; text-decoration: none; }
+
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1200px, calc(100% - 64px));
+  margin: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.caps {
+  font-size: 11px;
+  letter-spacing: .17em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+
+header { border-bottom: 1px solid var(--line); }
+
+.topbar {
+  min-height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.monogram {
+  font: 400 36px/1 var(--serif);
+  letter-spacing: -.09em;
+  color: var(--bronze);
+}
+
+.brand-text strong {
+  display: block;
+  font: 400 19px/1.2 var(--serif);
+}
+
+.brand-text small {
+  display: block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  margin-top: 3px;
+}
+
+nav {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a { font-size: 13px; }
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--bronze);
+}
+
+.intro {
+  padding: 105px 0 95px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 90px;
+  align-items: end;
+}
+
+.intro h1 {
+  font-size: clamp(62px, 7vw, 105px);
+  letter-spacing: -.045em;
+  margin: 20px 0 0;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.85;
+  max-width: 450px;
+  margin: 0;
+}
+
+.photo {
+  height: 420px;
+  overflow: hidden;
+  background: #aea195;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.paths {
+  padding: 105px 0 115px;
+}
+
+.section-heading {
+  max-width: 800px;
+  margin-bottom: 55px;
+}
+
+.section-heading h2 {
+  font-size: clamp(46px, 5vw, 70px);
+  letter-spacing: -.025em;
+  margin: 16px 0;
+}
+
+.section-heading p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 660px;
+}
+
+.path {
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr) minmax(0, 1.15fr) 28px;
+  gap: 25px;
+  border-top: 1px solid var(--line);
+  padding: 35px 0;
+  align-items: start;
+}
+
+.path:last-child { border-bottom: 1px solid var(--line); }
+
+.path-number {
+  font-size: 12px;
+  color: var(--bronze);
+}
+
+.path h3 {
+  font-size: clamp(30px, 3vw, 44px);
+  margin: 0;
+}
+
+.path p {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.85;
+}
+
+.path a {
+  font-size: 25px;
+  color: var(--bronze);
+}
+
+.path a:hover { transform: translate(3px, -3px); }
+
+.info {
+  padding: 95px 0;
+  background: #c8beb3;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 85px;
+}
+
+.info h2 {
+  font-size: clamp(44px, 5vw, 66px);
+  margin: 15px 0 0;
+}
+
+.info p {
+  color: #58483e;
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 0 0 25px;
+}
+
+.text-link {
+  display: inline-block;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 6px;
+  font-size: 14px;
+}
+
+.text-link:hover { color: var(--bronze); }
+
+.questions {
+  background: var(--night);
+  color: var(--milk);
+  padding: 115px 0;
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 95px;
+}
+
+.questions .caps { color: #d0ab90; }
+
+.questions h2 {
+  font-size: clamp(49px, 5vw, 70px);
+  margin: 17px 0 26px;
+}
+
+.questions p {
+  font-size: 15px;
+  color: #d9cdc3;
+  line-height: 1.85;
+}
+
+.fields-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.field { margin-bottom: 25px; }
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  background: var(--milk);
+  color: var(--ink);
+  border: 1px solid #c6b8ac;
+  border-radius: 0;
+  font: 400 14px/1.5 var(--sans);
+}
+
+textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+button {
+  background: var(--milk);
+  color: var(--ink);
+  border: 1px solid var(--milk);
+  border-radius: 0;
+  padding: 15px 30px;
+  font: 500 14px var(--sans);
+  cursor: pointer;
+}
+
+button:hover { background: #ded2c5; }
+
+.privacy-note {
+  font-size: 12px !important;
+  margin: 0 0 25px;
+}
+
+.privacy-note a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+footer {
+  background: var(--night);
+  border-top: 1px solid #65574d;
+  color: #cbbeb2;
+  padding: 28px 0;
+  font-size: 12px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 850px) {
+  .intro,
+  .info-grid,
+  .questions-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .intro { padding: 75px 0; }
+
+  .path {
+    grid-template-columns: 35px 1fr 25px;
+    gap: 15px;
+  }
+
+  .path p { grid-column: 2; }
+  .path a { grid-column: 3; grid-row: 1; }
+
+  .topbar {
+    flex-wrap: wrap;
+    padding: 24px 0;
+  }
+
+  nav { width: 100%; }
+}
+
+@media (max-width: 550px) {
+  .wrap { width: calc(100% - 36px); }
+  .intro h1 { font-size: 60px; }
+  .photo { height: 280px; }
+  .fields-two { grid-template-columns: 1fr; gap: 0; }
+  nav { gap: 18px; }
+  .paths, .info, .questions { padding: 75px 0; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap topbar">
+    <a class="brand" href="index.html">
+      <span class="monogram">M&amp;M</span>
+      <span class="brand-text">
+        <strong>Merit &amp; Momentum</strong>
+        <small>RECRUITING</small>
+      </span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap intro">
+  <div>
+    <span class="caps">Get in touch</span>
+    <h1>We'd like to hear from you.</h1>
+  </div>
+
+  <p>
+    Whether you're hiring, searching for work, or have a
+    question about Merit &amp; Momentum Recruiting,
+    we're here to help you find the right starting point.
+    Choose the option that best fits what you need.
+  </p>
+</section>
+
+<div class="wrap photo">
+  <img
+    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=85"
+    alt="People working together in a professional setting"
+  >
+</div>
+
+<section class="wrap paths">
+  <div class="section-heading">
+    <span class="caps">How can we help?</span>
+    <h2>Find the right place to begin.</h2>
+    <p>
+      We've made it simple to reach us without filling
+      out information that doesn't apply to you.
+    </p>
+  </div>
+
+  <div class="path">
+    <span class="path-number">01</span>
+    <h3>I'm an employer.</h3>
+    <p>
+      Tell us about your business, open positions, and
+      hiring needs. We'll use that information to
+      begin a conversation about direct hire recruiting.
+    </p>
+    <a href="employers.html"
+       aria-label="Open employer inquiry">↗</a>
+  </div>
+
+  <div class="path">
+    <span class="path-number">02</span>
+    <h3>I'm looking for work.</h3>
+    <p>
+      Share your skills, work experience, and employment
+      interests through our candidate introduction.
+      A resume is optional, and we welcome people
+      seeking second chance opportunities.
+    </p>
+    <a href="candidates.html"
+       aria-label="Open candidate application">↗</a>
+  </div>
+
+  <div class="path">
+    <span class="path-number">03</span>
+    <h3>I want to explore opportunities.</h3>
+    <p>
+      Visit our Careers page to learn about our candidate
+      network and view confirmed job openings as they
+      become available.
+    </p>
+    <a href="careers.html"
+       aria-label="Open career opportunities">↗</a>
+  </div>
+
+  <div class="path">
+    <span class="path-number">04</span>
+    <h3>I want to review recruiting services.</h3>
+    <p>
+      Learn how our employer paid direct hire model works,
+      including our placement fees of $1,000, $1,500,
+      and $2,000, with custom quotes for specialized
+      or volume hiring.
+    </p>
+    <a href="services.html"
+       aria-label="Open services and pricing">↗</a>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap info-grid">
+    <div>
+      <span class="caps">A straightforward process</span>
+      <h2>We want your first step to feel manageable.</h2>
+    </div>
+
+    <div>
+      <p>
+        Employers can begin by telling us what positions
+        they need to fill. Job seekers can introduce
+        themselves even when no specific opening has
+        been posted. We review the information provided
+        and follow up when there's an appropriate
+        reason to connect.
+      </p>
+
+      <p>
+        Our services are paid for by employers.
+        Candidates are never charged a fee to
+        be considered for employment opportunities.
+      </p>
+
+      <a href="about.html" class="text-link">
+        Learn more about Merit &amp; Momentum
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="questions">
+  <div class="wrap questions-grid">
+
+    <div>
+      <span class="caps">General questions</span>
+      <h2>Have something else you'd like to ask?</h2>
+      <p>
+        If your question doesn't relate to a specific
+        hiring request or candidate application,
+        you can send us a message here.
+        Please don't include sensitive personal information.
+      </p>
+    </div>
+
+    <form action="https://formspree.io/f/xqppwkjw"
+          method="POST">
+
+      <input type="hidden"
+             name="inquiry_type"
+             value="General contact inquiry">
+
+      <input type="hidden"
+             name="_subject"
+             value="Merit & Momentum General Contact">
+
+      <div class="honeypot" aria-hidden="true">
+        <label for="spam-check">Leave blank</label>
+        <input id="spam-check" name="_gotcha"
+               type="text" tabindex="-1"
+               autocomplete="off">
+      </div>
+
+      <div class="fields-two">
+        <div class="field">
+          <label for="name">Full name *</label>
+          <input id="name" name="name"
+                 type="text" autocomplete="name"
+                 required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address *</label>
+          <input id="email" name="email"
+                 type="email" autocomplete="email"
+                 required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Your message *</label>
+        <textarea id="message" name="message"
+                  required></textarea>
+      </div>
+
+      <p class="privacy-note">
+        By submitting this form, you agree to be
+        contacted about your inquiry. Read our
+        <a href="privacy.html">Privacy Policy</a>.
+      </p>
+
+      <button type="submit">Send message</button>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 Merit &amp; Momentum Recruiting</span>
+    <a href="privacy.html">Privacy Policy</a>
+    <span>Arkansas / Direct Hire Recruiting</span>
+  </div>
+</footer>
+
+</body>
+</html>
