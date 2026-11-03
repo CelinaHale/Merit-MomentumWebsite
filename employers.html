@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employer Inquiries | Merit & Momentum Recruiting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #eee9e1;
+      --light: #f7f3ed;
+      --brown: #6b4b34;
+      --dark: #3f2c20;
+      --copper: #a7653d;
+      --muted: #76665a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--dark);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .shell {
+      width: min(1100px, calc(100% - 48px));
+      margin: auto;
+    }
+
+    header {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #d8cdc2;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 20px;
+    }
+
+    .back {
+      font-size: 13px;
+      border-bottom: 1px solid var(--dark);
+    }
+
+    .intro {
+      max-width: 780px;
+      margin: 90px auto 65px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--copper);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1, h2 {
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7vw, 82px);
+      line-height: 1.05;
+      margin: 0 0 24px;
+      letter-spacing: -.025em;
+    }
+
+    .intro p {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .form-area {
+      background: var(--light);
+      padding: 65px 75px 75px;
+      margin-bottom: 100px;
+    }
+
+    .form-heading {
+      border-bottom: 1px solid #d8cdc2;
+      margin-bottom: 38px;
+      padding-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    .form-heading p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 10px 0 0;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .field { margin-bottom: 27px; }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 9px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #cec4b9;
+      background: #fffdfa;
+      padding: 15px 16px;
+      font: inherit;
+      font-size: 14px;
+      color: var(--dark);
+      border-radius: 0;
+    }
+
+    textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid var(--copper);
+      outline-offset: 2px;
+    }
+
+    .privacy {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 12px 0 28px;
+    }
+
+    .privacy label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-weight: 400;
+    }
+
+    .privacy input {
+      width: auto;
+      margin-top: 5px;
+    }
+
+    button {
+      appearance: none;
+      background: var(--dark);
+      color: white;
+      border: 1px solid var(--dark);
+      border-radius: 0;
+      padding: 17px 35px;
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    button:hover { background: var(--brown); }
+
+    footer {
+      border-top: 1px solid #d8cdc2;
+      padding: 30px 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .honeypot { display: none; }
+
+    @media(max-width: 700px) {
+      .row { grid-template-columns: 1fr; gap: 0; }
+      .form-area { padding: 35px 24px; }
+      .intro { margin: 65px auto 45px; }
+      .brand { font-size: 16px; }
+      .back { font-size: 12px; }
+      h2 { font-size: 34px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="shell header-row">
+      <a class="brand" href="index.html">Merit & Momentum Recruiting</a>
+      <a class="back" href="index.html">Return to homepage</a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="intro">
+      <div class="eyebrow">For employers</div>
+      <h1>Let's talk about who you need to hire.</h1>
+      <p>
+        Every workplace has different needs. Tell us about your
+        company, the positions you're looking to fill, and what
+        you're hoping to find in your next hire.
+      </p>
+    </section>
+
+    <section class="form-area">
+      <div class="form-heading">
+        <h2>Employer hiring inquiry</h2>
+        <p>
+          Please complete the information below to begin
+          a conversation with Merit & Momentum Recruiting.
+        </p>
+      </div>
+
+      <form
+        action="https://formspree.io/f/xqppwkjw"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Merit & Momentum Employer Inquiry"
+        >
+
+        <div class="honeypot" aria-hidden="true">
+          <label for="website-check">Leave this field blank</label>
+          <input type="text" name="_gotcha" id="website-check"
+                 tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="company">Company name *</label>
+            <input id="company" name="company_name"
+                   type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="contact">Contact person's name *</label>
+            <input id="contact" name="contact_name"
+                   type="text" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="email">Business email *</label>
+            <input id="email" name="email"
+                   type="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone"
+                   type="tel">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="location">Hiring location *</label>
+          <input id="location" name="hiring_location"
+                 type="text"
+                 placeholder="City, state, or remote"
+                 required>
+        </div>
+
+        <div class="field">
+          <label for="positions">What positions are you hiring for? *</label>
+          <input id="positions" name="positions"
+                 type="text"
+                 placeholder="Job titles or departments"
+                 required>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="openings">Number of openings *</label>
+            <select id="openings" name="number_of_openings" required>
+              <option value="">Select one</option>
+              <option>1</option>
+              <option>2 to 5</option>
+              <option>6 to 10</option>
+              <option>More than 10</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="timeline">Hiring timeline *</label>
+            <select id="timeline" name="hiring_timeline" required>
+              <option value="">Select one</option>
+              <option>Immediately</option>
+              <option>Within 30 days</option>
+              <option>Within 1 to 3 months</option>
+              <option>Exploring future hiring needs</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="arrangement">Type of hiring</label>
+          <select id="arrangement" name="hiring_type">
+            <option value="">Select one</option>
+            <option>Full time</option>
+            <option>Part time</option>
+            <option>Seasonal</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="details">Tell us more about your hiring needs</label>
+          <textarea id="details" name="additional_details"
+            placeholder="Describe the roles, required qualifications, pay range, workplace expectations, or anything else you'd like us to know."></textarea>
+        </div>
+
+        <div class="privacy">
+          <label>
+            <input type="checkbox" name="contact_consent"
+                   value="Agreed" required>
+            <span>
+              I understand that submitting this inquiry allows
+              Merit & Momentum Recruiting to contact me about
+              my company's hiring needs. Submitting an inquiry
+              does not create a recruiting agreement.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit">Submit hiring inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      © 2026 Merit & Momentum Recruiting
+    </div>
+  </footer>
+</body>
+</html>
