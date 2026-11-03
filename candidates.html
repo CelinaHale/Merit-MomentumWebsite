@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Candidate Applications | Merit & Momentum Recruiting</title>
+  <meta name="description" content="Introduce your experience, strengths, and career goals to Merit & Momentum Recruiting.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #eee9e1;
+      --light: #f7f3ed;
+      --brown: #6b4b34;
+      --dark: #3f2c20;
+      --copper: #a7653d;
+      --muted: #76665a;
+      --border: #d8cdc2;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--dark);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .shell {
+      width: min(1100px, calc(100% - 48px));
+      margin: auto;
+    }
+
+    header {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .back {
+      font-size: 13px;
+      border-bottom: 1px solid var(--dark);
+      white-space: nowrap;
+    }
+
+    .intro {
+      max-width: 790px;
+      margin: 90px auto 70px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--copper);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7vw, 82px);
+      line-height: 1.05;
+      letter-spacing: -.025em;
+      margin: 0 0 28px;
+    }
+
+    .intro p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .form-area {
+      background: var(--light);
+      padding: 70px 75px 80px;
+      margin-bottom: 100px;
+    }
+
+    .form-heading {
+      margin-bottom: 44px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 43px;
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    .form-heading p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .form-group {
+      margin-bottom: 45px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--copper);
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .field { margin-bottom: 26px; }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 9px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: #fffdfa;
+      border: 1px solid #cec4b9;
+      border-radius: 0;
+      color: var(--dark);
+      font: inherit;
+      font-size: 14px;
+      padding: 15px 16px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #988b80;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid var(--copper);
+      outline-offset: 2px;
+    }
+
+    .help {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 32px;
+      row-gap: 16px;
+      margin: 10px 0 25px;
+    }
+
+    .checkbox-group label,
+    .consent label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .checkbox-group input,
+    .consent input {
+      width: auto;
+      margin-top: 5px;
+      accent-color: var(--brown);
+    }
+
+    .note {
+      border-left: 2px solid var(--copper);
+      padding: 15px 20px;
+      margin: 25px 0 35px;
+      font-size: 14px;
+      color: var(--muted);
+      background: #f0e9e1;
+    }
+
+    .consent {
+      margin: 20px 0 30px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    button {
+      appearance: none;
+      background: var(--dark);
+      color: white;
+      border: 1px solid var(--dark);
+      border-radius: 0;
+      padding: 18px 40px;
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    button:hover { background: var(--brown); }
+
+    .closing {
+      padding: 0 0 100px;
+      text-align: center;
+    }
+
+    .closing h3 {
+      font-size: clamp(40px, 5vw, 58px);
+      line-height: 1.1;
+      max-width: 710px;
+      margin: 0 auto 24px;
+    }
+
+    .closing p {
+      max-width: 620px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @media (max-width: 700px) {
+      .row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .form-area { padding: 38px 24px; }
+
+      .intro { margin: 65px auto 48px; }
+
+      .brand { font-size: 16px; }
+
+      .back { font-size: 12px; }
+
+      h2 { font-size: 35px; }
+
+      .checkbox-group {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .shell { width: calc(100% - 32px); }
+      .header-row { gap: 12px; }
+      .back { white-space: normal; text-align: right; }
+      h1 { font-size: 48px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="shell header-row">
+      <a class="brand" href="index.html">
+        Merit & Momentum Recruiting
+      </a>
+      <a class="back" href="index.html">
+        Return to homepage
+      </a>
+    </div>
+  </header>
+
+  <main class="shell">
+
+    <section class="intro">
+      <div class="eyebrow">For candidates</div>
+
+      <h1>There is more to your experience than a resume.</h1>
+
+      <p>
+        Your next opportunity should begin with a better
+        understanding of what you can contribute. Tell us
+        about your experience, your strengths, and where
+        you want to go next.
+      </p>
+    </section>
+
+    <section class="form-area">
+
+      <div class="form-heading">
+        <h2>Candidate introduction</h2>
+        <p>
+          Complete the form below to introduce yourself
+          to Merit & Momentum Recruiting. We use this
+          information to understand your interests and
+          consider potential employment opportunities.
+        </p>
+      </div>
+
+      <form
+        action="https://formspree.io/f/mqppwkow"
+        method="POST"
+      >
+
+        <input type="hidden" name="_subject"
+          value="New Merit & Momentum Candidate Application">
+
+        <div class="honeypot" aria-hidden="true">
+          <label for="website-check">Leave blank</label>
+          <input id="website-check" type="text"
+            name="_gotcha" tabindex="-1"
+            autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <div class="section-label">
+            Personal and contact information
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="first_name">First name *</label>
+              <input type="text" id="first_name"
+                name="first_name"
+                autocomplete="given-name" required>
+            </div>
+
+            <div class="field">
+              <label for="last_name">Last name *</label>
+              <input type="text" id="last_name"
+                name="last_name"
+                autocomplete="family-name" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="email">Email address *</label>
+              <input type="email" id="email"
+                name="email"
+                autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone"
+                name="phone"
+                autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="location">
+              City and state *
+            </label>
+            <input type="text" id="location"
+              name="city_state"
+              placeholder="Example: Little Rock, Arkansas"
+              required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="section-label">
+            Employment interests
+          </div>
+
+          <div class="field">
+            <label for="positions">
+              What types of jobs interest you? *
+            </label>
+            <input type="text" id="positions"
+              name="desired_positions"
+              placeholder="Example: Administration, warehouse, customer service"
+              required>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="employment_type">
+                Preferred employment type *
+              </label>
+              <select id="employment_type"
+                name="employment_type" required>
+                <option value="">Select one</option>
+                <option>Full time</option>
+                <option>Part time</option>
+                <option>Seasonal</option>
+                <option>Flexible</option>
+                <option>Open to options</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="availability">
+                When could you begin working? *
+              </label>
+              <select id="availability"
+                name="availability" required>
+                <option value="">Select one</option>
+                <option>Immediately</option>
+                <option>Within 2 weeks</option>
+                <option>Within 30 days</option>
+                <option>More than 30 days</option>
+                <option>Exploring opportunities</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="work_location">
+              Preferred work arrangement
+            </label>
+            <select id="work_location"
+              name="work_arrangement">
+              <option value="">Select one</option>
+              <option>On site</option>
+              <option>Remote</option>
+              <option>Hybrid</option>
+              <option>Open to any arrangement</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>
+              Are you open to opportunities in other locations?
+            </label>
+            <div class="checkbox-group">
+              <label>
+                <input type="radio" name="relocation"
+                  value="Yes">
+                Yes
+              </label>
+              <label>
+                <input type="radio" name="relocation"
+                  value="No">
+                No
+              </label>
+              <label>
+                <input type="radio" name="relocation"
+                  value="Depends on opportunity">
+                Depends on the opportunity
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="section-label">
+            Experience and qualifications
+          </div>
+
+          <div class="field">
+            <label for="experience">
+              Tell us about your work experience *
+            </label>
+            <textarea id="experience"
+              name="work_experience"
+              required
+              placeholder="Describe the types of work you've done, positions you've held, and responsibilities you've managed."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="skills">
+              What skills or strengths would you bring
+              to a workplace? *
+            </label>
+            <textarea id="skills"
+              name="skills_and_strengths"
+              required
+              placeholder="Share your technical skills, practical experience, communication abilities, leadership, reliability, or other strengths."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="education">
+              Education, certifications, or training
+            </label>
+            <textarea id="education"
+              name="education_training"
+              placeholder="List any education, licenses, certifications, trade skills, apprenticeships, or relevant training."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="resume">
+              Resume or professional profile link (optional)
+            </label>
+            <input type="url" id="resume"
+              name="resume_link"
+              placeholder="https://">
+            <p class="help">
+              You can share a viewable link to your resume
+              or professional profile. Check that the link
+              can be opened by someone reviewing your application.
+              A resume is not required.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="section-label">
+            Looking ahead
+          </div>
+
+          <div class="field">
+            <label for="goals">
+              What are you looking for in your next opportunity?
+            </label>
+            <textarea id="goals" name="career_goals"
+              placeholder="Tell us about the kind of work, schedule, responsibilities, or professional growth you're seeking."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="additional">
+              Is there anything else you'd like us to know?
+            </label>
+            <textarea id="additional"
+              name="additional_information"
+              placeholder="You can share additional information relevant to your skills, availability, or employment interests."></textarea>
+          </div>
+        </div>
+
+        <div class="note">
+          Please do not include Social Security numbers,
+          financial information, medical records, or criminal
+          history details in this form. If information beyond
+          your qualifications is relevant to a specific role,
+          we will address that through an appropriate process.
+        </div>
+
+        <div class="consent">
+          <label for="consent">
+            <input id="consent" type="checkbox"
+              name="candidate_consent"
+              value="Agreed" required>
+            <span>
+              I understand that Merit & Momentum Recruiting
+              may contact me about employment opportunities
+              and may retain my submitted information for
+              recruiting purposes. My information will not
+              be shared with a prospective employer without
+              my permission. Submitting this form does not
+              guarantee employment or placement.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit">
+          Submit candidate introduction
+        </button>
+
+      </form>
+    </section>
+
+    <section class="closing">
+      <div class="eyebrow">
+        A different perspective on talent
+      </div>
+      <h3>
+        Your experience deserves a meaningful conversation.
+      </h3>
+      <p>
+        We believe the strongest hiring decisions begin with
+        understanding people and the work they are prepared
+        to do. Your introduction is a starting point for
+        that conversation, with no promise of a particular
+        opening or placement.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="shell">
+      © 2026 Merit & Momentum Recruiting
+    </div>
+  </footer>
+
+</body>
+</html>
