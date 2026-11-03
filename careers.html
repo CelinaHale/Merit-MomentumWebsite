@@ -4,552 +4,372 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Explore career opportunities and second chance employment through Merit & Momentum Recruiting in Arkansas.">
-<title>Career Opportunities | Merit & Momentum Recruiting</title>
-
+<meta name="description" content="Explore career opportunities with Merit & Momentum Recruiting in Arkansas, including support for candidates facing employment barriers and background screening challenges.">
+<title>Careers | Merit & Momentum Recruiting</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --paper: #eae5dd;
-  --milk: #f6f2eb;
-  --taupe: #c8beb3;
-  --ink: #342b26;
-  --brown: #6b4b34;
-  --bronze: #92694e;
-  --muted: #776b62;
-  --night: #302823;
-  --line: #c9beb2;
-  --serif: "Libre Caslon Display", Georgia, serif;
-  --sans: "DM Sans", Arial, sans-serif;
+  --paper:#eae5dd;
+  --milk:#f6f2eb;
+  --taupe:#c8beb3;
+  --ink:#342b26;
+  --brown:#6b4b34;
+  --bronze:#92694e;
+  --muted:#776b62;
+  --night:#302823;
+  --line:#c9beb2;
+  --serif:"Libre Caslon Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
 }
 
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
 body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--sans);
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.8;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--bronze);
-  outline-offset: 4px;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-.wrap {
-  width: min(1200px, calc(100% - 80px));
-  margin: auto;
-}
-
+a {color:inherit;text-decoration:none}
+a:focus-visible {outline:2px solid var(--bronze);outline-offset:4px}
+img {display:block;max-width:100%}
+.wrap {width:min(1200px,calc(100% - 80px));margin:auto}
 .caps {
-  color: var(--bronze);
-  font-size: 11px;
-  letter-spacing: .17em;
-  text-transform: uppercase;
-  font-weight: 600;
+  display:inline-block;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  color:var(--bronze);
 }
-
-h1, h2, h3 {
-  font-family: var(--serif);
-  font-weight: 400;
-  letter-spacing: -.025em;
-  line-height: 1.1;
+h1,h2,h3 {
+  font-family:var(--serif);
+  font-weight:400;
+  line-height:1.08;
+  letter-spacing:-.025em;
 }
-
+p {margin-top:0}
 .text-link {
-  display: inline-block;
-  font-size: 14px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid currentColor;
-  transition: color .2s;
+  display:inline-block;
+  padding-bottom:7px;
+  border-bottom:1px solid currentColor;
+  font-size:14px;
 }
+.text-link:hover {color:var(--bronze)}
 
-.text-link:hover { color: var(--bronze); }
+/* HEADER */
 
-/* SHARED HEADER */
-
-header {
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
-}
-
+header {background:var(--paper);border-bottom:1px solid var(--line)}
 .topbar {
-  min-height: 112px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 28px;
+  min-height:112px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:28px;
 }
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  min-width: 0;
-}
-
-.brand-logo {
-  display: block;
-  width: 116px;
-  height: 88px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.brand-text strong {
-  font: 400 21px/1.15 var(--serif);
-  color: var(--ink);
-}
-
+.brand {display:flex;align-items:center;gap:18px;min-width:0}
+.brand-logo {width:116px;height:88px;object-fit:contain;flex-shrink:0}
+.brand-text {display:flex;flex-direction:column;gap:5px}
+.brand-text strong {font:400 21px/1.15 var(--serif)}
 .brand-text small {
-  font-size: 9px;
-  letter-spacing: .22em;
-  font-weight: 600;
-  color: var(--bronze);
+  font-size:9px;
+  letter-spacing:.22em;
+  font-weight:600;
+  color:var(--bronze);
 }
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: clamp(18px, 3vw, 46px);
-  flex-wrap: wrap;
-}
-
-nav a {
-  font-size: 13px;
-  padding: 8px 0;
-  white-space: nowrap;
-}
-
-nav a:hover,
-nav a[aria-current="page"] {
-  color: var(--bronze);
-}
+nav {display:flex;gap:clamp(18px,3vw,46px);flex-wrap:wrap}
+nav a {font-size:13px;padding:8px 0;white-space:nowrap}
+nav a:hover,nav a[aria-current="page"] {color:var(--bronze)}
 
 /* HERO */
 
-.hero {
-  padding: 28px 0 100px;
-}
-
+.hero {padding:28px 0 100px}
 .hero-wrap {
-  position: relative;
-  min-height: 620px;
-  overflow: hidden;
-  background: #786b60;
+  position:relative;
+  min-height:630px;
+  overflow:hidden;
+  background:#786b60;
 }
-
-.hero-wrap img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-wrap > img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
-
 .hero-wrap::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(34,26,21,.70),
-    rgba(34,26,21,.38) 50%,
-    rgba(34,26,21,.15)
-  );
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(34,26,21,.83),rgba(34,26,21,.42) 68%,rgba(34,26,21,.17));
 }
-
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 750px;
-  padding: 90px 70px;
-  color: var(--milk);
+  position:relative;
+  z-index:1;
+  max-width:790px;
+  padding:95px 70px;
+  color:var(--milk);
 }
-
-.hero .caps { color: #eee0d3; }
-
-.hero h1 {
-  font-size: clamp(55px, 7vw, 92px);
-  line-height: 1.02;
-  margin: 25px 0 28px;
-}
-
-.hero p {
-  font-size: 17px;
-  line-height: 1.85;
-  max-width: 590px;
-  margin: 0 0 32px;
-}
+.hero .caps {color:#eee0d3}
+.hero h1 {font-size:clamp(57px,7vw,92px);margin:25px 0 28px}
+.hero p {max-width:600px;font-size:17px;line-height:1.85;margin-bottom:35px}
 
 /* INTRO */
 
-.intro {
-  padding-bottom: 120px;
+.intro {padding-bottom:120px}
+.split {
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:90px;
+}
+.intro h2,.section-title {
+  font-size:clamp(47px,5vw,73px);
+  color:var(--brown);
+  margin:20px 0 0;
+}
+.copy {font-size:16px;color:var(--muted);line-height:1.9}
+.copy p {margin-bottom:25px}
+
+/* CANDIDATE TYPES */
+
+.pathways {background:var(--milk);padding:115px 0}
+.section-intro {max-width:820px;margin-bottom:62px}
+.section-intro p {font-size:16px;color:var(--muted);margin-top:25px}
+.pathway-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:35px}
+.pathway {
+  border-top:1px solid var(--line);
+  padding-top:30px;
+}
+.pathway h3 {font-size:32px;margin:0 0 18px}
+.pathway p {font-size:15px;color:var(--muted);margin:0}
+
+/* BACKGROUND CHECK SECTION */
+
+.background-section {
+  padding:125px 0;
+  background:var(--paper);
 }
 
-.intro-grid {
-  display: grid;
-  grid-template-columns: .95fr 1.05fr;
-  gap: 90px;
+.background-heading {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:95px;
+  align-items:start;
+  margin-bottom:75px;
 }
 
-.intro h2 {
-  font-size: clamp(48px, 5vw, 74px);
-  line-height: 1.08;
-  color: var(--brown);
-  margin: 18px 0 0;
+.background-heading h2 {
+  font-size:clamp(51px,5.5vw,80px);
+  margin:20px 0 0;
 }
 
-.intro-copy {
-  padding-top: 36px;
-  font-size: 17px;
-  color: var(--muted);
+.background-heading .lead {
+  padding-top:42px;
+  font-size:18px;
+  line-height:1.85;
+  color:#584a40;
 }
 
-.intro-copy p { margin: 0 0 24px; }
+.background-heading .lead p {margin:0 0 25px}
 
-/* WHO WE WELCOME */
-
-.pathways {
-  background: var(--milk);
-  padding: 115px 0;
+.screening-info {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  margin-bottom:70px;
 }
 
-.pathways-heading {
-  max-width: 780px;
-  margin-bottom: 55px;
+.screening-item {
+  border-top:1px solid var(--line);
+  padding-top:35px;
 }
 
-.pathways h2 {
-  font-size: clamp(46px, 5vw, 72px);
-  color: var(--brown);
-  margin: 20px 0;
+.screening-item h3 {
+  font-size:clamp(30px,3.2vw,43px);
+  margin:0 0 20px;
 }
 
-.pathways-heading p {
-  font-size: 16px;
-  color: var(--muted);
+.screening-item p {
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.9;
+  margin:0 0 18px;
 }
 
-.pathways-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+.screening-statement {
+  background:var(--night);
+  color:var(--milk);
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:75px;
+  padding:65px 70px;
 }
 
-.path-item {
-  border-top: 1px solid var(--line);
-  padding-top: 30px;
+.screening-statement .caps {color:#d4a983}
+.screening-statement h3 {
+  font-size:clamp(37px,4vw,56px);
+  margin:18px 0 0;
 }
-
-.path-item h3 {
-  font-size: 32px;
-  margin: 0 0 18px;
+.screening-statement p {
+  font-size:16px;
+  color:#e0d4c9;
+  line-height:1.9;
+  margin:0 0 22px;
 }
+.screening-statement p:last-child {margin-bottom:0}
 
-.path-item p {
-  font-size: 15px;
-  color: var(--muted);
-  margin: 0;
-}
+/* SECOND CHANCE PHOTO FEATURE */
 
-/* SECOND CHANCE FEATURE */
-
-.feature {
-  padding: 115px 0;
-}
-
+.feature {padding:0 0 125px}
 .feature-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: var(--taupe);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:var(--taupe);
 }
-
-.feature-photo {
-  min-height: 510px;
-  overflow: hidden;
-}
-
-.feature-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+.feature-photo {min-height:510px;overflow:hidden}
+.feature-photo img {width:100%;height:100%;object-fit:cover}
 .feature-copy {
-  padding: 65px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  padding:65px 60px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
 }
-
 .feature-copy h2 {
-  font-size: clamp(44px, 4.5vw, 66px);
-  margin: 20px 0 24px;
+  font-size:clamp(43px,4.5vw,66px);
+  margin:20px 0 24px;
 }
-
 .feature-copy p {
-  font-size: 16px;
-  color: #58483e;
-  margin: 0 0 23px;
+  font-size:16px;
+  color:#58483e;
+  margin:0 0 23px;
 }
 
-/* CURRENT OPENINGS */
+/* OPENINGS */
 
-.openings {
-  padding-bottom: 120px;
-}
-
-.openings-heading {
-  max-width: 800px;
-  margin-bottom: 48px;
-}
-
-.openings h2 {
-  font-size: clamp(46px, 5vw, 72px);
-  color: var(--brown);
-  margin: 18px 0 22px;
-}
-
-.openings-heading p {
-  color: var(--muted);
-  font-size: 16px;
-  margin: 0;
-}
-
+.openings {padding:0 0 120px}
+.openings .section-intro {max-width:850px}
 .opening-notice {
-  background: var(--milk);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 38px 36px;
+  background:var(--milk);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:42px;
 }
-
-.opening-notice h3 {
-  font-size: 36px;
-  margin: 0 0 16px;
-}
-
-.opening-notice p {
-  color: var(--muted);
-  font-size: 15px;
-  max-width: 790px;
-  margin: 0 0 26px;
-}
+.opening-notice h3 {font-size:38px;margin:0 0 18px}
+.opening-notice p {color:var(--muted);font-size:15px;max-width:850px;margin:0 0 28px}
 
 /* PROCESS */
 
 .process {
-  background: var(--night);
-  color: var(--milk);
-  padding: 115px 0;
+  background:var(--night);
+  color:var(--milk);
+  padding:115px 0;
 }
-
 .process-grid {
-  display: grid;
-  grid-template-columns: .85fr 1.15fr;
-  gap: 100px;
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:95px;
 }
-
-.process .caps { color: #d3a37f; }
-
-.process h2 {
-  font-size: clamp(48px, 5vw, 72px);
-  margin: 20px 0 0;
-}
-
-.steps {
-  display: grid;
-  gap: 28px;
-}
-
-.step {
-  border-top: 1px solid rgba(255,255,255,.18);
-  padding-top: 22px;
-}
-
-.step h3 {
-  font-size: 29px;
-  margin: 0 0 12px;
-}
-
-.step p {
-  color: #ddd0c5;
-  font-size: 15px;
-  margin: 0;
-}
+.process .caps {color:#d4a983}
+.process h2 {font-size:clamp(47px,5vw,72px);margin:20px 0}
+.step {border-top:1px solid rgba(255,255,255,.2);padding:25px 0}
+.step h3 {font-size:30px;margin:0 0 12px}
+.step p {color:#ded2c7;font-size:15px;margin:0}
 
 /* CLOSING */
 
-.closing {
-  background: var(--milk);
-  padding: 120px 0;
-  text-align: center;
-}
-
+.closing {background:var(--milk);padding:120px 0;text-align:center}
 .closing h2 {
-  font-size: clamp(48px, 6vw, 80px);
-  color: var(--brown);
-  max-width: 820px;
-  margin: 20px auto 28px;
+  font-size:clamp(48px,6vw,80px);
+  color:var(--brown);
+  max-width:850px;
+  margin:20px auto 28px;
 }
-
 .closing p {
-  color: var(--muted);
-  font-size: 16px;
-  max-width: 660px;
-  margin: 0 auto 30px;
+  color:var(--muted);
+  max-width:680px;
+  margin:0 auto 30px;
 }
 
 /* FOOTER */
 
-footer {
-  background: var(--night);
-  color: #c6b9ad;
-}
-
+footer {background:var(--night);color:#c6b9ad}
 .footer-row {
-  padding: 30px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  font-size: 12px;
+  padding:30px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+  flex-wrap:wrap;
+  font-size:12px;
 }
+.footer-links {display:flex;flex-wrap:wrap;gap:23px}
+.footer-links a:hover {color:#fff}
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 23px;
-}
+/* TABLET */
 
-.footer-links a:hover { color: white; }
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .wrap { width: calc(100% - 40px); }
-
-  .topbar {
-    flex-wrap: wrap;
-    padding: 20px 0;
+@media(max-width:900px) {
+  .wrap {width:calc(100% - 40px)}
+  .topbar {flex-wrap:wrap;padding:20px 0}
+  nav {width:100%}
+  .split,.background-heading,.screening-statement,
+  .feature-grid,.process-grid {
+    grid-template-columns:1fr;
+    gap:38px;
   }
-
-  nav { width: 100%; }
-
-  .intro-grid,
-  .feature-grid,
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .pathways-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .feature-photo {
-    min-height: 340px;
-    max-height: 460px;
-  }
-
-  .feature-copy { padding: 45px 34px; }
-
-  .hero-content { padding: 70px 36px; }
-
-  .hero-wrap { min-height: 560px; }
-
-  .intro-copy { padding-top: 0; }
-
-  .pathways,
-  .feature,
-  .process,
-  .closing {
-    padding-top: 80px;
-    padding-bottom: 80px;
+  .pathway-grid {grid-template-columns:1fr;gap:30px}
+  .screening-info {gap:35px}
+  .background-heading .lead {padding-top:0}
+  .feature-photo {min-height:360px;max-height:470px}
+  .feature-copy {padding:45px 35px}
+  .screening-statement {padding:50px 40px}
+  .hero-content {padding:75px 40px}
+  .intro,.pathways,.background-section,.process,.closing {
+    padding-top:80px;
+    padding-bottom:80px;
   }
 }
 
-@media (max-width: 600px) {
-  .wrap { width: calc(100% - 36px); }
+/* MOBILE */
 
-  .brand-logo {
-    width: 88px;
-    height: 68px;
-  }
-
-  .brand-text strong { font-size: 17px; }
-  .brand-text small { font-size: 8px; }
-
-  nav {
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  nav a { font-size: 12px; }
-
-  .hero { padding: 14px 0 70px; }
-
-  .hero-wrap { min-height: 530px; }
-
-  .hero-content { padding: 60px 24px; }
-
-  .hero h1 { font-size: 49px; }
-
-  .hero p,
-  .intro-copy,
-  .feature-copy p,
-  .closing p {
-    font-size: 15px;
-  }
-
-  .opening-notice { padding: 30px 22px; }
-
-  .opening-notice h3 { font-size: 30px; }
-
-  .footer-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+@media(max-width:600px) {
+  .wrap {width:calc(100% - 36px)}
+  .brand-logo {width:88px;height:68px}
+  .brand-text strong {font-size:17px}
+  .brand-text small {font-size:8px}
+  nav {justify-content:space-between;gap:12px}
+  nav a {font-size:12px}
+  .hero {padding:14px 0 65px}
+  .hero-wrap {min-height:570px}
+  .hero-content {padding:65px 25px}
+  .hero h1 {font-size:51px}
+  .hero p {font-size:15px}
+  .screening-info {grid-template-columns:1fr;gap:25px}
+  .screening-statement {padding:40px 26px}
+  .background-heading h2 {font-size:54px}
+  .background-heading .lead {font-size:16px}
+  .feature {padding-bottom:80px}
+  .feature-copy {padding:40px 26px}
+  .opening-notice {padding:30px 24px}
+  .opening-notice h3 {font-size:32px}
+  .footer-row {flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 
 <body>
 
-<!-- SHARED HEADER -->
+<!-- HEADER -->
 
 <header>
   <div class="wrap topbar">
 
-    <a class="brand" href="index.html" aria-label="Merit and Momentum Recruiting home">
+    <a class="brand" href="index.html"
+       aria-label="Merit and Momentum Recruiting homepage">
 
       <img
         class="brand-logo"
@@ -563,7 +383,6 @@ footer {
         <strong>Merit &amp; Momentum</strong>
         <small>RECRUITING</small>
       </span>
-
     </a>
 
     <nav aria-label="Main navigation">
@@ -578,71 +397,70 @@ footer {
 
 <main>
 
-<!-- CAREERS HERO -->
+<!-- HERO -->
 
 <section class="hero">
   <div class="wrap hero-wrap">
 
     <img
       src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=88"
-      alt="People talking and working together in a welcoming setting"
+      alt="People working and learning together"
     >
 
     <div class="hero-content">
-
       <span class="caps">Career opportunities</span>
 
       <h1>Work should feel possible again.</h1>
 
       <p>
-        Merit &amp; Momentum Recruiting helps connect people
-        with employment opportunities across Arkansas.
-        Whether you have years of experience, are trying
-        to get back on your feet, or are looking for an
-        opportunity after setbacks, we want to learn
-        what you can do.
+        Whether you have years of experience, are returning
+        to work, or have encountered barriers that make
+        finding employment difficult, Merit &amp; Momentum
+        Recruiting wants to understand what you can
+        contribute and where you'd like to go.
       </p>
 
-      <a class="text-link" href="candidates.html">
+      <a href="candidates.html" class="text-link">
         Join our candidate network
       </a>
-
     </div>
+
   </div>
 </section>
 
 <!-- INTRODUCTION -->
 
 <section class="intro">
-  <div class="wrap intro-grid">
+  <div class="wrap split">
 
     <div>
       <span class="caps">A better starting point</span>
 
-      <h2>
-        This page is here to help people move forward.
-      </h2>
+      <h2>We believe qualifications deserve a closer look.</h2>
     </div>
 
-    <div class="intro-copy">
+    <div class="copy">
 
       <p>
-        We know that finding work can feel frustrating,
-        especially when you have been overlooked,
-        judged too quickly, or told no more times than
-        you can count. Merit &amp; Momentum was created
-        to make that process more human and more honest.
+        Finding work can be difficult, particularly
+        when you've been turned down repeatedly or
+        have struggled to get an employer to look
+        beyond your application. A job search can
+        become even more frustrating when background
+        screening creates additional barriers.
       </p>
 
       <p>
-        We work with employers who need dependable people,
-        and we want candidates to feel comfortable
-        introducing themselves without pretending their
-        path has been perfect. We care about readiness,
-        reliability, and the ability to contribute.
+        We want to help employers consider candidates
+        based on relevant skills, experience, reliability,
+        and the actual requirements of a position.
+        We also want candidates to feel comfortable
+        taking the first step, even when their work
+        history or circumstances are complicated.
       </p>
 
     </div>
+
   </div>
 </section>
 
@@ -651,57 +469,53 @@ footer {
 <section class="pathways">
   <div class="wrap">
 
-    <div class="pathways-heading">
-
+    <div class="section-intro">
       <span class="caps">Who we welcome</span>
 
-      <h2>
+      <h2 class="section-title">
         There is more than one path to being ready for work.
       </h2>
 
       <p>
-        You do not need to fit one narrow mold to connect
-        with us. If you are serious about working, growing,
-        and showing what you can bring to a workplace,
-        we want to hear from you.
+        Our candidate network is open to people with
+        different backgrounds, experience levels,
+        and employment goals.
       </p>
-
     </div>
 
-    <div class="pathways-grid">
+    <div class="pathway-grid">
 
-      <div class="path-item">
-        <h3>People with work experience</h3>
+      <div class="pathway">
+        <h3>Experienced workers</h3>
 
         <p>
-          If you have experience in warehouse, production,
-          customer service, administration, trades,
-          or other fields, we want to learn where you've
-          worked and what you do well.
+          Whether your experience is in manufacturing,
+          customer service, administration, transportation,
+          skilled trades, or another industry, we'd
+          like to understand your abilities and goals.
         </p>
       </div>
 
-      <div class="path-item">
-        <h3>People starting over</h3>
+      <div class="pathway">
+        <h3>People returning to work</h3>
 
         <p>
-          If you have a gap in your employment history,
-          are rebuilding after personal challenges,
-          or are returning to the workforce, that doesn't
-          automatically disqualify you from a meaningful
-          opportunity.
+          Employment gaps, changing circumstances,
+          and time away from the workforce can make
+          starting over difficult. We welcome people
+          who are prepared to explore their next opportunity.
         </p>
       </div>
 
-      <div class="path-item">
-        <h3>People seeking a real chance</h3>
+      <div class="pathway">
+        <h3>People facing hiring barriers</h3>
 
         <p>
-          If you have a criminal record or have struggled
-          to get employers to look past the surface,
-          Merit &amp; Momentum is intended to be a place
-          where your qualifications can still be part
-          of the conversation.
+          Criminal records, previous background check
+          denials, and other hiring challenges do not
+          automatically prevent someone from joining
+          our candidate network and being considered
+          for suitable opportunities.
         </p>
       </div>
 
@@ -710,17 +524,149 @@ footer {
   </div>
 </section>
 
-<!-- SECOND CHANCE EMPLOYMENT -->
+<!-- BACKGROUND CHECKS -->
+
+<section class="background-section" id="background-checks">
+  <div class="wrap">
+
+    <div class="background-heading">
+
+      <div>
+        <span class="caps">
+          Background checks &amp; employment barriers
+        </span>
+
+        <h2>
+          What happens when your background makes
+          finding work harder?
+        </h2>
+      </div>
+
+      <div class="lead">
+
+        <p>
+          For some people, the hardest part of finding
+          employment isn't the interview or the work
+          itself. It's reaching the background check
+          stage and wondering whether something from
+          their past will end another opportunity.
+        </p>
+
+        <p>
+          If you've been denied employment because
+          of a criminal record or have concerns
+          about what a screening report might show,
+          you're still welcome to introduce yourself
+          to Merit &amp; Momentum Recruiting.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="screening-info">
+
+      <div class="screening-item">
+
+        <h3>
+          Not every job has the same background requirements.
+        </h3>
+
+        <p>
+          Some positions have restrictions based
+          on licensing, legal requirements, workplace
+          responsibilities, or the type of work involved.
+          Other employers may have more flexibility
+          in how they evaluate applicants.
+        </p>
+
+        <p>
+          The relevance of a record may depend on
+          several factors, including the position,
+          the nature of the offense, how much time
+          has passed, and any applicable legal restrictions.
+        </p>
+
+      </div>
+
+      <div class="screening-item">
+
+        <h3>
+          A previous denial doesn't determine every
+          future opportunity.
+        </h3>
+
+        <p>
+          Being turned down by one employer doesn't
+          necessarily mean every employer will reach
+          the same decision. Hiring standards vary,
+          and candidates may qualify for positions
+          with different responsibilities and
+          screening requirements.
+        </p>
+
+        <p>
+          Our goal is to understand your skills
+          and interests while discussing realistic
+          opportunities as employer relationships
+          and confirmed openings develop.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="screening-statement">
+
+      <div>
+        <span class="caps">What you can expect from us</span>
+
+        <h3>
+          You deserve a conversation grounded in facts,
+          not assumptions.
+        </h3>
+      </div>
+
+      <div>
+
+        <p>
+          We won't ask you to disclose criminal history
+          through our initial candidate introduction.
+          If an opportunity involves specific background
+          screening requirements, we'll aim to communicate
+          those requirements clearly and discuss relevant
+          next steps with you.
+        </p>
+
+        <p>
+          We cannot promise that an employer will overlook
+          a conviction, waive a required screening,
+          or make a particular hiring decision.
+          We can work toward identifying employers
+          and opportunities where a candidate's
+          qualifications receive meaningful consideration.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SECOND CHANCE FEATURE -->
 
 <section class="feature">
   <div class="wrap feature-grid">
 
     <div class="feature-photo">
+
       <img
         src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=88"
-        alt="People having a conversation in a professional environment"
+        alt="People collaborating in a professional meeting"
         loading="lazy"
       >
+
     </div>
 
     <div class="feature-copy">
@@ -728,23 +674,24 @@ footer {
       <span class="caps">Second chance employment</span>
 
       <h2>
-        Being counted out should not be the end of the story.
+        Your past is part of your history.
+        Your abilities are part of your future.
       </h2>
 
       <p>
-        Second chance employment matters because many
-        capable people never get a fair opportunity
-        to show employers what they can do. A record,
-        an employment gap, or a difficult chapter
-        should not erase someone's skills, growth,
-        or work ethic.
+        We understand that people may have complicated
+        histories, including convictions, employment
+        interruptions, or other circumstances that
+        affect their ability to secure work.
       </p>
 
       <p>
-        We are building a candidate network that gives
-        employers a clearer picture of the person
-        in front of them while helping job seekers
-        present themselves with dignity and honesty.
+        Accountability, personal growth, practical
+        skills, and reliability can all be relevant
+        when someone is prepared to contribute
+        to a workplace. We want to help create
+        informed hiring conversations that consider
+        the person and the position.
       </p>
 
       <a href="candidates.html" class="text-link">
@@ -760,38 +707,38 @@ footer {
 
 <section class="wrap openings">
 
-  <div class="openings-heading">
+  <div class="section-intro">
 
-    <span class="caps">Current openings</span>
+    <span class="caps">Current opportunities</span>
 
-    <h2>
-      We are building our employer network now.
+    <h2 class="section-title">
+      We're building our employer network.
     </h2>
 
     <p>
-      As Merit &amp; Momentum begins working with
-      employers, this page will feature available jobs
-      and details about each opportunity. Until then,
-      you can join our candidate network so we can learn
-      about your experience and interests.
+      As we establish relationships with employers,
+      we'll share confirmed openings and relevant
+      position details. You can join our candidate
+      network now, even if no position is currently
+      listed that matches your experience.
     </p>
 
   </div>
 
   <div class="opening-notice">
 
-    <h3>Candidate network now open</h3>
+    <h3>Candidate introductions are now open.</h3>
 
     <p>
-      We are currently gathering candidate information
-      so we can better connect job seekers with future
-      opportunities. You do not need a perfect resume
-      to get started, and you can introduce yourself
-      while you are still figuring out your next step.
+      You can submit your skills, work experience,
+      location, and employment preferences for
+      consideration as opportunities become available.
+      A resume is optional. No job offer or placement
+      is guaranteed by submitting your information.
     </p>
 
     <a href="candidates.html" class="text-link">
-      Complete the candidate introduction form
+      Complete the candidate introduction
     </a>
 
   </div>
@@ -801,76 +748,88 @@ footer {
 <!-- HOW IT WORKS -->
 
 <section class="process">
+
   <div class="wrap process-grid">
 
     <div>
 
-      <span class="caps">How it works</span>
+      <span class="caps">Our process</span>
 
       <h2>
-        What to expect when you reach out.
+        What happens after you introduce yourself?
       </h2>
 
     </div>
 
-    <div class="steps">
+    <div>
 
       <div class="step">
-        <h3>Tell us about yourself.</h3>
+        <h3>Tell us about your experience.</h3>
+
         <p>
-          Complete our candidate form and share your
-          experience, strengths, location, and the
-          types of work you're interested in.
+          Complete the candidate introduction
+          with your skills, interests, availability,
+          and general employment history.
         </p>
       </div>
 
       <div class="step">
-        <h3>We review your information.</h3>
+        <h3>We review your qualifications.</h3>
+
         <p>
-          We consider your work experience, skills,
-          and goals to better understand the types
-          of opportunities that may fit.
+          We'll consider the information you provide
+          to understand the types of roles that
+          may align with your abilities and goals.
         </p>
       </div>
 
       <div class="step">
-        <h3>We reach out when there's a fit.</h3>
+        <h3>We discuss relevant opportunities.</h3>
+
         <p>
-          As opportunities become available, we may
-          contact you when your qualifications align
-          with an employer's needs.
+          If a confirmed opening appears suitable,
+          we may contact you about its requirements,
+          including applicable screening conditions,
+          before proceeding with a referral.
         </p>
       </div>
 
       <div class="step">
-        <h3>The employer makes the final decision.</h3>
+        <h3>The employer makes the hiring decision.</h3>
+
         <p>
-          Employers handle their own interviews,
-          hiring decisions, and onboarding.
-          Merit &amp; Momentum helps create the connection.
+          Employers control their interviews,
+          background screening, offers, and
+          onboarding. We help facilitate
+          appropriate introductions.
         </p>
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- CLOSING -->
 
 <section class="closing">
+
   <div class="wrap">
 
-    <span class="caps">Take the next step</span>
+    <span class="caps">
+      Take the next step
+    </span>
 
     <h2>
-      You don't have to wait until everything is perfect to begin.
+      You don't have to have a perfect past
+      to begin a conversation about your future.
     </h2>
 
     <p>
-      If you're ready to work, ready to rebuild,
-      or simply ready for someone to take your
-      qualifications seriously, start by introducing
-      yourself to Merit &amp; Momentum Recruiting.
+      If you're prepared to work and interested
+      in exploring new opportunities, we'd like
+      to learn about what you can offer.
     </p>
 
     <a href="candidates.html" class="text-link">
@@ -878,13 +837,15 @@ footer {
     </a>
 
   </div>
+
 </section>
 
 </main>
 
-<!-- SHARED FOOTER -->
+<!-- FOOTER -->
 
 <footer>
+
   <div class="wrap footer-row">
 
     <span>
@@ -903,6 +864,7 @@ footer {
     </span>
 
   </div>
+
 </footer>
 
 </body>
