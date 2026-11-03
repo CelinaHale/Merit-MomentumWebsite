@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Merit & Momentum Recruiting connects employers with capable talent and helps candidates find meaningful career opportunities.">
   <title>Merit & Momentum Recruiting</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,18 +20,11 @@
       --brown-dark: #3f2c20;
       --copper: #a7653d;
       --charcoal: #25211e;
-      --white: #fffdf9;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       background: var(--cream);
@@ -38,14 +33,13 @@
       line-height: 1.6;
     }
 
-    img {
-      display: block;
-      width: 100%;
-    }
+    img { display: block; width: 100%; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    a { color: inherit; text-decoration: none; }
+
+    a:focus-visible {
+      outline: 2px solid var(--copper);
+      outline-offset: 5px;
     }
 
     .shell {
@@ -55,18 +49,22 @@
 
     .eyebrow {
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: .18em;
       font-size: 12px;
       font-weight: 600;
       color: var(--copper);
       margin-bottom: 20px;
     }
 
-    .serif {
-      font-family: "Libre Caslon Display", serif;
+    .text-link {
+      display: inline-block;
+      font-size: 14px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid currentColor;
+      transition: opacity .2s ease;
     }
 
-    /* HEADER */
+    .text-link:hover { opacity: .65; }
 
     header {
       min-height: 92px;
@@ -99,6 +97,7 @@
 
     nav a {
       position: relative;
+      white-space: nowrap;
     }
 
     nav a::after {
@@ -109,12 +108,10 @@
       width: 0;
       height: 1px;
       background: var(--brown-dark);
-      transition: width 0.25s ease;
+      transition: width .25s ease;
     }
 
-    nav a:hover::after {
-      width: 100%;
-    }
+    nav a:hover::after { width: 100%; }
 
     .header-contact {
       justify-self: end;
@@ -123,13 +120,12 @@
       border-bottom: 1px solid var(--brown-dark);
     }
 
-    /* HERO */
-
     .hero {
       position: relative;
       min-height: 610px;
       overflow: hidden;
       margin-bottom: 115px;
+      background: #5b5148;
     }
 
     .hero img {
@@ -143,13 +139,12 @@
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(25, 20, 17, 0.66) 0%,
-          rgba(25, 20, 17, 0.38) 48%,
-          rgba(25, 20, 17, 0.08) 100%
-        );
+      background: linear-gradient(
+        90deg,
+        rgba(25,20,17,.66) 0%,
+        rgba(25,20,17,.38) 48%,
+        rgba(25,20,17,.08) 100%
+      );
     }
 
     .hero-content {
@@ -169,8 +164,8 @@
       font-family: "Libre Caslon Display", serif;
       font-weight: 400;
       font-size: clamp(58px, 6vw, 84px);
-      line-height: 0.98;
-      letter-spacing: -0.035em;
+      line-height: .98;
+      letter-spacing: -.035em;
       margin-bottom: 30px;
     }
 
@@ -181,18 +176,9 @@
       margin-bottom: 34px;
     }
 
-    .text-link {
-      display: inline-block;
-      font-size: 14px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid currentColor;
-    }
-
-    /* INTRO */
-
     .intro {
       display: grid;
-      grid-template-columns: 0.95fr 1.15fr;
+      grid-template-columns: .95fr 1.15fr;
       gap: 110px;
       align-items: start;
       padding-bottom: 130px;
@@ -204,7 +190,7 @@
       line-height: 1.08;
       font-weight: 400;
       color: var(--brown);
-      letter-spacing: -0.025em;
+      letter-spacing: -.025em;
     }
 
     .intro-copy {
@@ -213,20 +199,16 @@
       font-size: 17px;
     }
 
-    .intro-copy p + p {
-      margin-top: 26px;
-    }
-
-    /* LOGO FEATURE */
+    .intro-copy p + p { margin-top: 26px; }
 
     .identity-section {
-      background: #c8beb3;
+      background: var(--taupe);
       padding: 100px 0;
     }
 
     .identity-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: .9fr 1.1fr;
       gap: 90px;
       align-items: center;
     }
@@ -234,6 +216,7 @@
     .logo-frame {
       max-width: 560px;
       margin: 0 auto;
+      min-height: 150px;
     }
 
     .logo-frame img {
@@ -247,7 +230,7 @@
       font-weight: 400;
       color: var(--brown-dark);
       line-height: 1.08;
-      letter-spacing: -0.025em;
+      letter-spacing: -.025em;
       margin-bottom: 28px;
     }
 
@@ -258,9 +241,8 @@
       margin-bottom: 28px;
     }
 
-    /* EMPLOYERS */
-
-    .split-section {
+    .split-section,
+    .candidate-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
       min-height: 650px;
@@ -276,6 +258,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: flex-start;
       background: var(--cream-light);
     }
 
@@ -286,7 +269,7 @@
       font-weight: 400;
       color: var(--brown);
       margin-bottom: 28px;
-      letter-spacing: -0.025em;
+      letter-spacing: -.025em;
     }
 
     .split-copy p {
@@ -296,19 +279,9 @@
       max-width: 580px;
     }
 
-    /* CANDIDATES */
-
-    .candidate-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 650px;
-    }
-
     .candidate-section .split-copy {
       background: var(--cream);
     }
-
-    /* APPROACH */
 
     .approach {
       padding: 125px 0;
@@ -318,7 +291,7 @@
 
     .approach-grid {
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
+      grid-template-columns: .85fr 1.15fr;
       gap: 110px;
       align-items: start;
     }
@@ -328,7 +301,7 @@
       font-size: clamp(48px, 5vw, 70px);
       line-height: 1.06;
       font-weight: 400;
-      letter-spacing: -0.03em;
+      letter-spacing: -.03em;
     }
 
     .approach-copy {
@@ -338,11 +311,7 @@
       color: #e7ddd5;
     }
 
-    .approach-copy p + p {
-      margin-top: 25px;
-    }
-
-    /* CONTACT */
+    .approach-copy p + p { margin-top: 25px; }
 
     .contact-section {
       padding: 125px 0 110px;
@@ -361,15 +330,40 @@
 
     .contact-section p {
       max-width: 690px;
-      margin: 0 auto 34px;
+      margin: 0 auto 38px;
       font-size: 17px;
       color: #66564b;
     }
 
-    /* FOOTER */
+    .contact-options {
+      max-width: 780px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      text-align: left;
+      border-top: 1px solid #d5c9be;
+      padding-top: 42px;
+    }
+
+    .contact-option h3 {
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 1.2;
+      color: var(--brown);
+      margin-bottom: 14px;
+    }
+
+    .contact-option p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0 0 24px;
+      text-align: left;
+    }
 
     footer {
-      border-top: 1px solid rgba(63, 44, 32, 0.16);
+      border-top: 1px solid rgba(63,44,32,.16);
       padding: 30px 0;
       font-size: 12px;
       color: #6b5c51;
@@ -382,19 +376,25 @@
       align-items: center;
     }
 
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-      .shell {
-        width: min(100% - 36px, 1240px);
-      }
-
+    @media (max-width: 1050px) {
       .nav-wrap {
         grid-template-columns: 1fr auto;
       }
 
       nav {
-        display: none;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        padding-bottom: 20px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .split-copy { padding: 75px 50px; }
+    }
+
+    @media (max-width: 900px) {
+      .shell {
+        width: min(100% - 36px, 1240px);
       }
 
       .hero {
@@ -402,9 +402,7 @@
         margin-bottom: 80px;
       }
 
-      .hero-content {
-        padding: 85px 30px;
-      }
+      .hero-content { padding: 85px 30px; }
 
       .intro,
       .identity-grid,
@@ -413,30 +411,19 @@
         gap: 45px;
       }
 
-      .intro-copy {
-        padding-top: 0;
-      }
+      .intro-copy { padding-top: 0; }
 
       .split-section,
       .candidate-section {
         grid-template-columns: 1fr;
       }
 
-      .candidate-section .split-image {
-        order: 1;
-      }
+      .candidate-section .split-image { order: 1; }
+      .candidate-section .split-copy { order: 2; }
 
-      .candidate-section .split-copy {
-        order: 2;
-      }
-
-      .split-image {
-        min-height: 420px;
-      }
-
-      .split-copy {
-        padding: 75px 35px;
-      }
+      .split-image { min-height: 420px; }
+      .split-image img { height: 420px; }
+      .split-copy { padding: 75px 35px; }
 
       .identity-section,
       .approach,
@@ -451,21 +438,24 @@
     }
 
     @media (max-width: 560px) {
-      header {
-        min-height: 78px;
-      }
+      header { padding: 24px 0; }
 
       .brand {
         font-size: 15px;
+        white-space: normal;
       }
 
       .header-contact {
         font-size: 11px;
+        text-align: right;
       }
 
-      .hero h1 {
-        font-size: 52px;
+      nav {
+        gap: 18px;
+        font-size: 12px;
       }
+
+      .hero h1 { font-size: 52px; }
 
       .hero p,
       .intro-copy,
@@ -475,31 +465,36 @@
         font-size: 15px;
       }
 
-      .intro {
-        padding-bottom: 85px;
-      }
+      .intro { padding-bottom: 85px; }
+      .hero { min-height: 600px; }
 
-      .hero {
-        min-height: 600px;
+      .contact-options {
+        grid-template-columns: 1fr;
+        gap: 36px;
       }
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <div class="shell nav-wrap">
-      <a href="#" class="brand">Merit & Momentum Recruiting</a>
 
-      <nav>
-        <a href="#employers">Employers</a>
-        <a href="#candidates">Candidates</a>
+      <a href="index.html" class="brand">
+        Merit & Momentum Recruiting
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="employers.html">Employers</a>
+        <a href="candidates.html">Candidates</a>
         <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <a href="#contact" class="header-contact">Start a conversation</a>
+      <a href="#contact" class="header-contact">
+        Start a conversation
+      </a>
+
     </div>
   </header>
 
@@ -508,7 +503,7 @@
     <section class="shell hero">
       <img
         src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=88"
-        alt="Professional modern office interior"
+        alt="Modern professional office interior"
       >
 
       <div class="hero-content">
@@ -517,16 +512,18 @@
         <h1>Recruiting with a wider view of talent.</h1>
 
         <p>
-          We connect employers with capable people who are ready to contribute and
-          help qualified candidates reach meaningful opportunities where their
-          experience, reliability, and potential can be fully considered.
+          We connect employers with capable people who are ready to contribute
+          and help qualified candidates reach meaningful opportunities where
+          their experience, reliability, and potential can be fully considered.
         </p>
 
-        <a href="#employers" class="text-link">Explore how we work</a>
+        <a href="#services" class="text-link">
+          Explore how we work
+        </a>
       </div>
     </section>
 
-    <section class="shell intro">
+    <section class="shell intro" id="services">
       <div>
         <div class="eyebrow">What we do</div>
         <h2>Better hiring begins with seeing the whole picture.</h2>
@@ -535,15 +532,16 @@
       <div class="intro-copy">
         <p>
           Merit & Momentum Recruiting works with employers who want dependable
-          people and a hiring process grounded in what a position actually requires.
-          We look beyond narrow assumptions and consider the experience, work ethic,
-          reliability, readiness, and potential a candidate brings to the workplace.
+          people and a hiring process grounded in what a position actually
+          requires. We look beyond narrow assumptions and consider the
+          experience, work ethic, reliability, readiness, and potential
+          a candidate brings to the workplace.
         </p>
 
         <p>
-          That approach gives employers access to talent they may otherwise overlook
-          while giving qualified candidates a more meaningful opportunity to
-          demonstrate what they can contribute.
+          That approach gives employers access to talent they may otherwise
+          overlook while giving qualified candidates a more meaningful
+          opportunity to demonstrate what they can contribute.
         </p>
       </div>
     </section>
@@ -564,16 +562,16 @@
           <h2>Merit should be visible before assumptions take over.</h2>
 
           <p>
-            Strong workers do not always arrive through traditional hiring pipelines.
-            Some bring years of practical experience. Others bring resilience,
-            adaptability, leadership, or a work ethic that cannot be captured by a
-            quick scan of a resume.
+            Strong workers do not always arrive through traditional hiring
+            pipelines. Some bring years of practical experience. Others bring
+            resilience, adaptability, leadership, or a work ethic that cannot
+            be captured by a quick scan of a resume.
           </p>
 
           <p>
-            Our role is to help employers identify that value and make informed
-            hiring decisions based on the work, the person, and the opportunity in
-            front of them.
+            Our role is to help employers identify that value and make
+            informed hiring decisions based on the work, the person, and
+            the opportunity in front of them.
           </p>
         </div>
 
@@ -584,7 +582,8 @@
       <div class="split-image">
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=88"
-          alt="Professional team meeting"
+          alt="Professionals collaborating at a meeting"
+          loading="lazy"
         >
       </div>
 
@@ -594,18 +593,21 @@
         <h2>Hiring should begin with what the work actually requires.</h2>
 
         <p>
-          We help employers look beyond narrow filters and focus on the qualities
-          that directly affect performance: experience, dependability, readiness,
-          communication, work ethic, and fit.
+          We help employers look beyond narrow filters and focus on the
+          qualities that directly affect performance: experience,
+          dependability, readiness, communication, work ethic, and fit.
         </p>
 
         <p>
-          Merit & Momentum Recruiting is built for employers who want stronger
-          candidate conversations, broader access to talent, and a recruiting
-          partner willing to understand the actual needs of the workplace.
+          Merit & Momentum Recruiting is built for employers who want
+          stronger candidate conversations, broader access to talent,
+          and a recruiting partner willing to understand the actual
+          needs of the workplace.
         </p>
 
-        <a href="#contact" class="text-link">Talk with us about hiring</a>
+        <a href="employers.html" class="text-link">
+          Submit a hiring inquiry
+        </a>
       </div>
     </section>
 
@@ -616,24 +618,27 @@
         <h2>A resume should not be the only part of your story an employer sees.</h2>
 
         <p>
-          Good candidates are often reduced to a few lines on paper before anyone
-          has taken the time to understand what they can actually do.
+          Good candidates are often reduced to a few lines on paper before
+          anyone has taken the time to understand what they can actually do.
         </p>
 
         <p>
-          We want to understand your experience, strengths, goals, reliability, and
-          the kind of opportunity you are prepared to step into. The goal is not to
-          hide your story. It is to make sure your ability is part of the
-          conversation too.
+          We want to understand your experience, strengths, goals,
+          reliability, and the kind of opportunity you are prepared
+          to step into. The goal is not to hide your story. It is
+          to make sure your ability is part of the conversation too.
         </p>
 
-        <a href="#contact" class="text-link">Connect with Merit & Momentum</a>
+        <a href="candidates.html" class="text-link">
+          Introduce yourself
+        </a>
       </div>
 
       <div class="split-image">
         <img
           src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=88"
-          alt="Professional candidate in a workplace"
+          alt="Professionals working together"
+          loading="lazy"
         >
       </div>
     </section>
@@ -642,20 +647,23 @@
       <div class="shell approach-grid">
         <div>
           <div class="eyebrow">Our approach</div>
+
           <h2>A stronger workforce can begin with a different conversation.</h2>
         </div>
 
         <div class="approach-copy">
           <p>
-            Recruiting works best when employers are clear about what they need and
-            candidates are evaluated on what they can actually bring to the role.
-            That requires more than matching keywords on a resume.
+            Recruiting works best when employers are clear about what they
+            need and candidates are evaluated on what they can actually
+            bring to the role. That requires more than matching keywords
+            on a resume.
           </p>
 
           <p>
-            We want to understand the position, the workplace, the expectations,
-            and the person. That creates room for better questions, better matches,
-            and hiring decisions that make sense in the real world.
+            We want to understand the position, the workplace, the
+            expectations, and the person. That creates room for better
+            questions, better matches, and hiring decisions that make
+            sense in the real world.
           </p>
         </div>
       </div>
@@ -665,15 +673,43 @@
       <div class="shell">
         <div class="eyebrow">Start a conversation</div>
 
-        <h2>Let’s talk about what you need next.</h2>
+        <h2>Let's talk about what you need next.</h2>
 
         <p>
-          Whether you are an employer looking for dependable talent or a candidate
-          ready for your next opportunity, Merit & Momentum Recruiting is built
-          around conversations that begin with ability, readiness, and fit.
+          Whether you're looking for dependable talent or exploring
+          your next career opportunity, choose the path below to
+          begin a conversation with Merit & Momentum Recruiting.
         </p>
 
-        <span class="text-link">Contact information coming soon</span>
+        <div class="contact-options">
+
+          <div class="contact-option">
+            <h3>Looking to hire?</h3>
+
+            <p>
+              Tell us about your company, open positions, and hiring
+              priorities so we can understand what you're looking for.
+            </p>
+
+            <a href="employers.html" class="text-link">
+              Employer hiring inquiry
+            </a>
+          </div>
+
+          <div class="contact-option">
+            <h3>Exploring your next role?</h3>
+
+            <p>
+              Share your experience, strengths, and career interests
+              so we can learn more about your qualifications.
+            </p>
+
+            <a href="candidates.html" class="text-link">
+              Candidate introduction
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
 
