@@ -4,928 +4,434 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="description" content="Direct hire recruiting services and transparent employer placement fees from Merit & Momentum Recruiting in Arkansas.">
-
-<title>Employer Services & Pricing | Merit & Momentum Recruiting</title>
-
+<meta name="description" content="Merit & Momentum Recruiting offers employer paid direct hire recruiting, workforce resource guidance, and transparent placement fees in Arkansas.">
+<title>Services & Pricing | Merit & Momentum Recruiting</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
-
 <style>
-:root {
-  --paper:#eae5dd;
-  --milk:#f6f2eb;
-  --taupe:#c8beb3;
-  --ink:#342b26;
-  --brown:#6b4b34;
-  --bronze:#92694e;
-  --muted:#776b62;
-  --night:#302823;
-  --line:#c9beb2;
+:root{
+  --paper:#eae5dd;--milk:#f6f2eb;--taupe:#c8beb3;
+  --ink:#342b26;--brown:#6b4b34;--bronze:#92694e;
+  --muted:#776b62;--night:#302823;--line:#c9beb2;
   --serif:"Libre Caslon Display",Georgia,serif;
   --sans:"DM Sans",Arial,sans-serif;
 }
-
-* { box-sizing:border-box; }
-
-html { scroll-behavior:smooth; }
-
-body {
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--sans);
-  line-height:1.75;
-  -webkit-font-smoothing:antialiased;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.8 var(--sans)}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--bronze)}
+a:focus-visible{outline:2px solid var(--bronze);outline-offset:4px}
+img{display:block;max-width:100%}
+.wrap{width:min(1200px,calc(100% - 80px));margin:auto}
+.caps{display:block;color:var(--bronze);font-size:11px;font-weight:600;letter-spacing:.17em;text-transform:uppercase}
+h1,h2,h3{font:400 1em/1.1 var(--serif);letter-spacing:-.025em}
+p{margin:0 0 24px}
+.link{display:inline-block;border-bottom:1px solid currentColor;padding-bottom:6px;font-size:14px}
+header{border-bottom:1px solid var(--line);background:var(--paper)}
+.topbar{min-height:112px;display:flex;justify-content:space-between;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:18px;min-width:0}
+.brand-logo{width:116px;height:88px;object-fit:contain;flex-shrink:0}
+.brand-text{display:flex;flex-direction:column;gap:5px}
+.brand-text strong{font:400 21px/1.15 var(--serif)}
+.brand-text small{font-size:9px;letter-spacing:.22em;font-weight:600;color:var(--bronze)}
+nav{display:flex;align-items:center;gap:clamp(18px,3vw,46px);flex-wrap:wrap}
+nav a{font-size:13px;padding:8px 0;white-space:nowrap}
+.intro{padding:110px 0 95px}
+.intro h1{font-size:clamp(59px,7vw,102px);max-width:1000px;margin:22px 0 30px}
+.intro p{font-size:18px;color:var(--muted);max-width:750px}
+.photo{height:440px;overflow:hidden;background:#918379}
+.photo img{width:100%;height:100%;object-fit:cover}
+.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:95px}
+.model,.process{padding:115px 0}
+.split h2,.section-heading h2{font-size:clamp(45px,5vw,72px);color:var(--brown);margin:20px 0 0}
+.copy{font-size:16px;color:var(--muted)}
+.pricing{background:var(--milk);padding:115px 0}
+.section-heading{max-width:800px;margin-bottom:60px}
+.section-heading p{color:var(--muted);margin-top:25px}
+.price-row{display:grid;grid-template-columns:1fr 210px;gap:40px;align-items:center;padding:32px 0;border-top:1px solid var(--line)}
+.price-row:last-child{border-bottom:1px solid var(--line)}
+.price-row h3{font-size:clamp(29px,3vw,40px);margin:0 0 12px}
+.price-row p{font-size:14px;color:var(--muted);margin:0}
+.amount{font:400 clamp(34px,4vw,51px)/1.1 var(--serif);text-align:right;color:var(--bronze)}
+.amount.custom{font-size:27px}
+.pricing-note{font-size:13px;color:var(--muted);max-width:850px;margin-top:28px}
+.support{padding:115px 0;background:var(--taupe)}
+.support-intro{max-width:850px;margin-bottom:65px}
+.support-intro h2{font-size:clamp(45px,5vw,72px);margin:20px 0}
+.support-intro p{font-size:16px;color:#58483e}
+.support-row{display:grid;grid-template-columns:52px .85fr 1.15fr;gap:28px;padding:33px 0;border-top:1px solid #ab9e91}
+.support-row:last-of-type{border-bottom:1px solid #ab9e91}
+.support-row .num{font-size:12px;color:var(--brown)}
+.support-row h3{font-size:clamp(28px,3vw,39px);margin:0}
+.support-row p{font-size:15px;color:#58483e;margin:0}
+.support-links{display:flex;flex-wrap:wrap;gap:20px 32px;margin-top:36px}
+.support-links a{border-bottom:1px solid currentColor;padding-bottom:5px;font-size:13px}
+.disclaimer{font-size:13px;color:#58483e;margin-top:30px}
+.step{display:grid;grid-template-columns:50px .85fr 1.15fr;gap:30px;padding:30px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step span{font-size:12px;color:var(--bronze)}
+.step h3{font-size:32px;margin:0}
+.step p{font-size:15px;color:var(--muted);margin:0}
+.terms{padding:115px 0;background:var(--night);color:var(--milk)}
+.terms .caps{color:#d0ad92}
+.terms h2{color:var(--milk)}
+.terms .copy{color:#e1d6cc}
+.closing{padding:115px 0;background:var(--milk);text-align:center}
+.closing h2{font-size:clamp(49px,6vw,80px);max-width:850px;margin:20px auto 30px}
+.closing p{max-width:690px;margin:0 auto 30px;color:var(--muted)}
+footer{background:var(--night);color:#c6b9ad}
+.footer-row{padding:30px 0;display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap;font-size:12px}
+.footer-links{display:flex;flex-wrap:wrap;gap:23px}
+@media(max-width:950px){
+ .wrap{width:calc(100% - 40px)}
+ .topbar{flex-wrap:wrap;padding:20px 0}
+ nav{width:100%}
+ .split{grid-template-columns:1fr;gap:35px}
+ .step,.support-row{grid-template-columns:38px 1fr;gap:15px}
+ .step p,.support-row p{grid-column:2}
+ .model,.pricing,.support,.process,.terms,.closing{padding-top:80px;padding-bottom:80px}
 }
-
-a {
-  color:inherit;
-  text-decoration:none;
-}
-
-a:focus-visible {
-  outline:2px solid var(--bronze);
-  outline-offset:4px;
-}
-
-img {
-  display:block;
-  max-width:100%;
-}
-
-.wrap {
-  width:min(1200px,calc(100% - 80px));
-  margin:auto;
-}
-
-.caps {
-  display:inline-block;
-  color:var(--bronze);
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:.17em;
-  text-transform:uppercase;
-}
-
-h1,h2,h3 {
-  font-family:var(--serif);
-  font-weight:400;
-  line-height:1.09;
-  letter-spacing:-.025em;
-}
-
-.text-link {
-  display:inline-block;
-  font-size:14px;
-  padding-bottom:7px;
-  border-bottom:1px solid currentColor;
-  transition:color .2s;
-}
-
-.text-link:hover { color:var(--bronze); }
-
-/* SHARED HEADER */
-
-header {
-  border-bottom:1px solid var(--line);
-  background:var(--paper);
-}
-
-.topbar {
-  min-height:112px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:28px;
-}
-
-.brand {
-  display:flex;
-  align-items:center;
-  gap:18px;
-  min-width:0;
-}
-
-.brand-logo {
-  width:116px;
-  height:88px;
-  object-fit:contain;
-  flex-shrink:0;
-}
-
-.brand-text {
-  display:flex;
-  flex-direction:column;
-  gap:5px;
-}
-
-.brand-text strong {
-  font:400 21px/1.15 var(--serif);
-  color:var(--ink);
-}
-
-.brand-text small {
-  font-size:9px;
-  font-weight:600;
-  letter-spacing:.22em;
-  color:var(--bronze);
-}
-
-nav {
-  display:flex;
-  align-items:center;
-  gap:clamp(18px,3vw,46px);
-  flex-wrap:wrap;
-}
-
-nav a {
-  font-size:13px;
-  padding:8px 0;
-  white-space:nowrap;
-}
-
-nav a:hover { color:var(--bronze); }
-
-/* PAGE INTRODUCTION */
-
-.intro {
-  padding:110px 0 100px;
-  max-width:1050px;
-}
-
-.intro h1 {
-  font-size:clamp(60px,7vw,103px);
-  margin:23px 0 33px;
-  max-width:980px;
-}
-
-.intro p {
-  color:var(--muted);
-  font-size:18px;
-  line-height:1.85;
-  max-width:740px;
-  margin:0 0 30px;
-}
-
-/* FEATURE IMAGE */
-
-.feature-photo {
-  height:480px;
-  overflow:hidden;
-  background:#8e8176;
-}
-
-.feature-photo img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* BUSINESS MODEL */
-
-.model {
-  padding:125px 0;
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:110px;
-}
-
-.model h2 {
-  font-size:clamp(48px,5vw,72px);
-  color:var(--brown);
-  margin:20px 0 0;
-}
-
-.model-copy {
-  color:var(--muted);
-  font-size:17px;
-  line-height:1.9;
-  padding-top:22px;
-}
-
-.model-copy p { margin:0 0 27px; }
-
-/* PRICING */
-
-.pricing {
-  background:var(--milk);
-  padding:120px 0 130px;
-}
-
-.pricing-heading {
-  max-width:820px;
-  margin-bottom:65px;
-}
-
-.pricing-heading h2 {
-  font-size:clamp(49px,5vw,76px);
-  margin:22px 0 25px;
-  color:var(--brown);
-}
-
-.pricing-heading p {
-  color:var(--muted);
-  font-size:16px;
-  line-height:1.85;
-  margin:0;
-}
-
-.price-list {
-  border-top:1px solid var(--line);
-}
-
-.price-row {
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 210px;
-  gap:45px;
-  align-items:center;
-  padding:36px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.price-row h3 {
-  font-size:clamp(30px,3.2vw,41px);
-  margin:0 0 12px;
-}
-
-.price-row p {
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.8;
-  max-width:720px;
-  margin:0;
-}
-
-.amount {
-  font:400 clamp(36px,4vw,52px)/1.1 var(--serif);
-  color:var(--bronze);
-  text-align:right;
-}
-
-.amount.custom { font-size:29px; }
-
-.pricing-note {
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.85;
-  max-width:900px;
-  margin:30px 0 35px;
-}
-
-/* TEMP STAFFING COMPARISON */
-
-.comparison {
-  background:var(--taupe);
-  padding:120px 0;
-}
-
-.comparison-grid {
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:100px;
-}
-
-.comparison h2 {
-  font-size:clamp(48px,5vw,72px);
-  margin:20px 0 0;
-}
-
-.comparison-copy p {
-  font-size:16px;
-  color:#58483e;
-  line-height:1.9;
-  margin:0 0 24px;
-}
-
-.comparison-table {
-  border-collapse:collapse;
-  width:100%;
-  font-size:13px;
-  text-align:left;
-  margin:30px 0 20px;
-}
-
-.comparison-table th,
-.comparison-table td {
-  border-top:1px solid rgba(63,44,32,.25);
-  padding:16px 10px;
-  vertical-align:top;
-}
-
-.comparison-table th { font-weight:600; }
-
-/* RECRUITING PROCESS */
-
-.process {
-  padding:125px 0;
-}
-
-.process-heading {
-  max-width:800px;
-  margin-bottom:65px;
-}
-
-.process-heading h2 {
-  font-size:clamp(48px,5vw,74px);
-  color:var(--brown);
-  margin:20px 0 0;
-}
-
-.step {
-  display:grid;
-  grid-template-columns:65px .75fr 1.25fr;
-  gap:35px;
-  border-top:1px solid var(--line);
-  padding:35px 0;
-  align-items:start;
-}
-
-.step:last-child {
-  border-bottom:1px solid var(--line);
-}
-
-.step-number {
-  color:var(--bronze);
-  font-size:12px;
-}
-
-.step h3 {
-  font-size:clamp(28px,3vw,38px);
-  margin:0;
-}
-
-.step p {
-  font-size:15px;
-  color:var(--muted);
-  line-height:1.85;
-  margin:0;
-}
-
-/* PAYMENT TERMS */
-
-.terms {
-  background:var(--night);
-  color:var(--milk);
-  padding:120px 0;
-}
-
-.terms-grid {
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:105px;
-}
-
-.terms .caps { color:#d0ab90; }
-
-.terms h2 {
-  font-size:clamp(48px,5vw,72px);
-  margin:20px 0 0;
-}
-
-.terms-copy p {
-  color:#e0d5cc;
-  font-size:16px;
-  line-height:1.85;
-  margin:0 0 25px;
-}
-
-/* CLOSING */
-
-.closing {
-  padding:125px 0;
-  text-align:center;
-  background:var(--milk);
-}
-
-.closing h2 {
-  font-size:clamp(50px,6vw,83px);
-  max-width:850px;
-  margin:22px auto 30px;
-}
-
-.closing p {
-  color:var(--muted);
-  font-size:17px;
-  max-width:680px;
-  margin:0 auto 34px;
-}
-
-/* FOOTER */
-
-footer {
-  background:var(--night);
-  color:#c6b9ad;
-}
-
-.footer-row {
-  padding:30px 0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:25px;
-  flex-wrap:wrap;
-  font-size:12px;
-}
-
-.footer-links {
-  display:flex;
-  flex-wrap:wrap;
-  gap:23px;
-}
-
-.footer-links a:hover { color:white; }
-
-/* RESPONSIVE */
-
-@media(max-width:900px) {
-  .wrap { width:calc(100% - 40px); }
-
-  .topbar {
-    flex-wrap:wrap;
-    padding:20px 0;
-  }
-
-  nav { width:100%; }
-
-  .model,
-  .comparison-grid,
-  .terms-grid {
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .step {
-    grid-template-columns:45px 1fr;
-    gap:15px;
-  }
-
-  .step p { grid-column:2; }
-
-  .feature-photo { height:390px; }
-
-  .intro,.model,.pricing,.comparison,.process,
-  .terms,.closing {
-    padding-top:85px;
-    padding-bottom:85px;
-  }
-}
-
-@media(max-width:600px) {
-  .wrap { width:calc(100% - 36px); }
-
-  .brand-logo {
-    width:88px;
-    height:68px;
-  }
-
-  .brand-text strong { font-size:17px; }
-  .brand-text small { font-size:8px; }
-
-  nav {
-    justify-content:space-between;
-    gap:12px;
-  }
-
-  nav a { font-size:12px; }
-
-  .intro h1 { font-size:57px; }
-
-  .intro p { font-size:16px; }
-
-  .feature-photo { height:280px; }
-
-  .price-row {
-    grid-template-columns:1fr;
-    gap:18px;
-    padding:30px 0;
-  }
-
-  .amount {
-    text-align:left;
-    font-size:40px;
-  }
-
-  .amount.custom { font-size:27px; }
-
-  .comparison-table { font-size:12px; }
-
-  .comparison-table th,
-  .comparison-table td { padding:12px 7px; }
-
-  .footer-row {
-    flex-direction:column;
-    align-items:flex-start;
-  }
+@media(max-width:600px){
+ .wrap{width:calc(100% - 36px)}
+ .brand-logo{width:88px;height:68px}
+ .brand-text strong{font-size:17px}
+ .brand-text small{font-size:8px}
+ nav{justify-content:space-between;gap:12px}
+ nav a{font-size:12px}
+ .intro{padding:75px 0}
+ .intro h1{font-size:57px}
+ .intro p{font-size:16px}
+ .photo{height:280px}
+ .price-row{grid-template-columns:1fr;gap:15px}
+ .amount{text-align:left;font-size:40px}
+ .amount.custom{font-size:26px}
+ .footer-row{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 
 <body>
 
-<!-- SHARED HEADER -->
-
 <header>
   <div class="wrap topbar">
-
-    <a class="brand" href="index.html"
-       aria-label="Merit and Momentum Recruiting homepage">
-
-      <img
-        class="brand-logo"
-        src="merit-momentum-logo.png"
-        alt="Merit & Momentum Recruiting logo"
-        width="116"
-        height="88"
-      >
-
+    <a class="brand" href="index.html" aria-label="Merit and Momentum Recruiting homepage">
+      <img class="brand-logo" src="merit-momentum-logo.png" alt="Merit & Momentum Recruiting logo" width="116" height="88">
       <span class="brand-text">
         <strong>Merit &amp; Momentum</strong>
         <small>RECRUITING</small>
       </span>
     </a>
-
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html">Contact</a>
     </nav>
-
   </div>
 </header>
 
 <main>
 
-<!-- INTRODUCTION -->
-
 <section class="wrap intro">
   <span class="caps">Employer services &amp; pricing</span>
-
-  <h1>Hiring support that makes financial sense.</h1>
-
+  <h1>Recruiting support that looks beyond the resume.</h1>
   <p>
-    Finding the right employee takes time, attention,
-    and an understanding of the work. Merit &amp; Momentum
-    Recruiting offers direct hire recruiting services
-    with straightforward placement fees, helping
-    employers find qualified candidates without
-    an ongoing temporary staffing markup.
+    We help employers find candidates for direct hire positions,
+    understand available workforce resources, and approach hiring
+    with the information needed to make sound decisions.
   </p>
-
-  <a class="text-link" href="employers.html">
-    Discuss your hiring needs
-  </a>
+  <a class="link" href="employers.html#inquiry">Discuss your hiring needs</a>
 </section>
 
-<!-- FEATURE PHOTOGRAPH -->
-
-<div class="wrap feature-photo">
-  <img
-    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=85"
-    alt="Professionals collaborating in a workplace"
-  >
+<div class="wrap photo">
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=85" alt="Business professionals working together">
 </div>
 
-<!-- DIRECT HIRE MODEL -->
-
-<section class="wrap model">
-
+<section class="wrap model split">
   <div>
-    <span class="caps">Our recruiting model</span>
-
-    <h2>Your employees. Your payroll. Our recruiting support.</h2>
+    <span class="caps">Our business model</span>
+    <h2>Direct hire recruiting with clear responsibilities.</h2>
   </div>
-
-  <div class="model-copy">
-
+  <div class="copy">
     <p>
-      Merit &amp; Momentum operates through an employer paid
-      direct hire recruiting model. We help identify
-      interested candidates for positions that employers
-      intend to fill directly.
+      Merit &amp; Momentum Recruiting helps employers identify
+      interested candidates for positions they intend to fill
+      directly. The employer interviews and hires the worker,
+      handles payroll and employment obligations, and makes
+      all final employment decisions.
     </p>
-
     <p>
-      The employer conducts its own interviews,
-      makes the final hiring decision, and handles
-      wages, payroll taxes, benefits, onboarding,
-      and other employment responsibilities.
+      Rather than billing for hours worked through a temporary
+      staffing arrangement, we charge one agreed placement fee
+      when a referred candidate begins employment.
     </p>
-
     <p>
-      We charge an agreed placement fee when a candidate
-      we've referred successfully begins employment,
-      according to the written recruiting agreement.
-      Candidates are never charged for employment
-      opportunities through Merit &amp; Momentum.
+      Our additional guidance helps employers locate relevant
+      bonding and workforce resources when those programs may
+      support a particular hire. Candidates never pay a
+      recruiting fee.
     </p>
-
   </div>
 </section>
 
-<!-- PLACEMENT FEES -->
+<!-- STANDARD PLACEMENT PRICING -->
 
 <section class="pricing" id="pricing">
   <div class="wrap">
-
-    <div class="pricing-heading">
-      <span class="caps">Transparent placement fees</span>
-
-      <h2>Know what recruiting support costs before you commit.</h2>
-
+    <div class="section-heading">
+      <span class="caps">Placement fees</span>
+      <h2>Know your recruiting costs before you hire.</h2>
       <p>
-        Our placement fees depend on the type of
-        position being filled. We confirm the
-        applicable fee, recruiting responsibilities,
-        and payment terms with each employer
-        before a search begins.
+        We confirm the position's classification,
+        applicable placement fee, and service terms in
+        writing before a recruiting search begins.
       </p>
     </div>
 
-    <div class="price-list">
-
-      <div class="price-row">
-        <div>
-          <h3>General Labor &amp; Support</h3>
-          <p>
-            Warehouse associates, production employees,
-            general laborers, entry level operations,
-            and similar support positions.
-          </p>
-        </div>
-        <div class="amount">$1,000</div>
+    <div class="price-row">
+      <div>
+        <h3>General Labor &amp; Support</h3>
+        <p>Warehouse associates, production workers, general labor, and similar support roles.</p>
       </div>
+      <span class="amount">$1,000</span>
+    </div>
 
-      <div class="price-row">
-        <div>
-          <h3>Administrative &amp; Experienced Support</h3>
-          <p>
-            Administrative assistants, customer service
-            representatives, receptionists, experienced
-            clerical employees, and related support roles.
-          </p>
-        </div>
-        <div class="amount">$1,500</div>
+    <div class="price-row">
+      <div>
+        <h3>Administrative &amp; Experienced Support</h3>
+        <p>Office administration, customer support, clerical work, and related experienced roles.</p>
       </div>
+      <span class="amount">$1,500</span>
+    </div>
 
-      <div class="price-row">
-        <div>
-          <h3>Skilled Trades &amp; Supervisory</h3>
-          <p>
-            Skilled tradespeople, technicians,
-            production leads, department supervisors,
-            and similar roles requiring specialized
-            experience or responsibility.
-          </p>
-        </div>
-        <div class="amount">$2,000</div>
+    <div class="price-row">
+      <div>
+        <h3>Skilled Trades &amp; Supervisory</h3>
+        <p>Skilled trades, technicians, production leads, and supervisory positions.</p>
       </div>
+      <span class="amount">$2,000</span>
+    </div>
 
-      <div class="price-row">
-        <div>
-          <h3>Executive &amp; Specialized Professional</h3>
-          <p>
-            Senior leadership, advanced professional
-            positions, and highly specialized roles
-            requiring a tailored recruiting approach.
-          </p>
-        </div>
-        <div class="amount custom">Custom Quote</div>
+    <div class="price-row">
+      <div>
+        <h3>Executive &amp; Specialized Professional</h3>
+        <p>Leadership positions and professional searches requiring specialized recruiting.</p>
       </div>
+      <span class="amount custom">Custom Quote</span>
+    </div>
 
-      <div class="price-row">
-        <div>
-          <h3>Multiple Hires &amp; Volume Recruiting</h3>
-          <p>
-            Businesses filling several positions can
-            request a recruiting proposal based on
-            hiring volume and the requirements of
-            the roles.
-          </p>
-        </div>
-        <div class="amount custom">Custom Quote</div>
+    <div class="price-row">
+      <div>
+        <h3>Multiple Hires &amp; Volume Recruiting</h3>
+        <p>Recruiting projects involving several hires, recurring needs, or substantial hiring volume.</p>
       </div>
-
+      <span class="amount custom">Custom Quote</span>
     </div>
 
     <p class="pricing-note">
-      Standard fees apply per successful direct hire
-      placement unless otherwise agreed in writing.
-      The placement fee is earned when the referred
-      candidate begins employment. Under our standard
-      proposed terms, payment is due within seven
-      calendar days of the invoice date. The employer
-      and Merit &amp; Momentum confirm all applicable
-      terms in a written agreement before recruiting begins.
+      Fees apply per successful placement unless a different
+      arrangement is agreed in writing. Under our standard
+      terms, the placement fee is earned on the candidate's
+      first day of work and payment is due within seven
+      calendar days of the invoice date. No upfront fee
+      is charged simply to inquire about our services.
     </p>
 
-    <a href="employers.html" class="text-link">
-      Request recruiting support
-    </a>
+    <a class="link" href="employers.html#inquiry">Request recruiting support</a>
+  </div>
+</section>
+
+<!-- ADDED VALUE -->
+
+<section class="support" id="employer-support">
+  <div class="wrap">
+
+    <div class="support-intro">
+      <span class="caps">Included recruiting guidance</span>
+      <h2>Hiring support can include more than finding a candidate.</h2>
+      <p>
+        Some employers are unfamiliar with programs that
+        may help reduce specific risks or support workforce
+        development. As part of our recruiting service,
+        Merit &amp; Momentum can help identify relevant
+        programs and guide employers toward the agencies
+        responsible for them.
+      </p>
+    </div>
+
+    <div class="support-row">
+      <span class="num">01</span>
+      <h3>Federal bonding program navigation</h3>
+      <p>
+        We help employers understand the Federal Bonding
+        Program and connect with Arkansas program contacts.
+        Eligible hires may receive no cost fidelity bond
+        coverage, commonly $5,000 for six months, against
+        covered employee dishonesty losses. A job offer
+        with a start date is generally needed before
+        issuance. The administering program determines
+        eligibility and coverage.
+      </p>
+    </div>
+
+    <div class="support-row">
+      <span class="num">02</span>
+      <h3>Training and workforce programs</h3>
+      <p>
+        We help identify Arkansas Workforce Services and
+        local workforce development resources that may
+        support eligible employers with recruiting,
+        training, or retaining workers. Any funding,
+        reimbursement, or participation is subject
+        to program availability and approval.
+      </p>
+    </div>
+
+    <div class="support-row">
+      <span class="num">03</span>
+      <h3>Current tax incentive resources</h3>
+      <p>
+        We direct employers to current federal and state
+        information and appropriate tax professionals.
+        The Work Opportunity Tax Credit is not currently
+        available for employees beginning work after
+        December 31, 2025. We will not represent expired
+        incentives as guaranteed savings.
+      </p>
+    </div>
+
+    <div class="support-row">
+      <span class="num">04</span>
+      <h3>Screening and hiring considerations</h3>
+      <p>
+        We support informed hiring conversations that
+        consider job requirements, qualifications,
+        relevant background concerns, and applicable
+        restrictions. Employers conduct their own
+        screening and remain responsible for legal
+        compliance and final hiring decisions.
+      </p>
+    </div>
+
+    <div class="support-row">
+      <span class="num">05</span>
+      <h3>Practical onboarding and retention guidance</h3>
+      <p>
+        We can help employers identify useful workforce
+        contacts and discuss clear expectations,
+        appropriate training, and workplace practices
+        that support successful employment.
+      </p>
+    </div>
+
+    <div class="support-links">
+      <a href="https://dws.arkansas.gov/workforce-services/employers/" target="_blank" rel="noopener noreferrer">
+        Arkansas employer programs ↗
+      </a>
+      <a href="https://bonds4jobs.com/our-services/employers" target="_blank" rel="noopener noreferrer">
+        Federal bonding information ↗
+      </a>
+      <a href="https://dws.arkansas.gov/workforce-services/wioa/" target="_blank" rel="noopener noreferrer">
+        Workforce training resources ↗
+      </a>
+      <a href="https://www.irs.gov/forms-pubs/form-8850-is-no-longer-in-use" target="_blank" rel="noopener noreferrer">
+        IRS tax credit status ↗
+      </a>
+    </div>
+
+    <p class="disclaimer">
+      Merit &amp; Momentum's program navigation is included
+      in our recruiting support and does not create any
+      guaranteed benefit. We do not issue bonds, award
+      funding, approve tax credits, or act as an insurer,
+      attorney, or tax adviser.
+    </p>
 
   </div>
 </section>
 
-<!-- TEMPORARY STAFFING COMPARISON -->
-
-<section class="comparison">
-  <div class="wrap comparison-grid">
-
-    <div>
-      <span class="caps">Understanding the difference</span>
-
-      <h2>Direct hire recruiting works differently from temporary staffing.</h2>
-    </div>
-
-    <div class="comparison-copy">
-
-      <p>
-        Temporary staffing companies generally employ
-        workers during their assignments and charge
-        employers an hourly rate covering wages,
-        employment costs, administration, and the
-        staffing company's margin.
-      </p>
-
-      <p>
-        Merit &amp; Momentum helps employers find
-        people they can hire directly. Our service
-        uses an agreed placement fee rather than
-        ongoing hourly staffing charges.
-      </p>
-
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>Temporary Staffing</th>
-            <th>Merit &amp; Momentum</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Worker employed by</td>
-            <td>Generally the agency</td>
-            <td>Employer directly</td>
-          </tr>
-
-          <tr>
-            <td>Worker wages paid by</td>
-            <td>Agency</td>
-            <td>Employer</td>
-          </tr>
-
-          <tr>
-            <td>Recruiting charges</td>
-            <td>Usually included in ongoing hourly billing</td>
-            <td>One agreed placement fee</td>
-          </tr>
-
-          <tr>
-            <td>Typical purpose</td>
-            <td>Temporary or flexible staffing</td>
-            <td>Permanent or ongoing positions</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p style="font-size:13px">
-        Some staffing agencies also offer direct hire
-        recruiting. Actual costs, services, and employment
-        responsibilities depend on each provider's agreement.
-      </p>
-
-    </div>
-  </div>
-</section>
-
-<!-- RECRUITING PROCESS -->
+<!-- PROCESS -->
 
 <section class="wrap process">
-
-  <div class="process-heading">
-    <span class="caps">How it works</span>
-
-    <h2>A straightforward process from inquiry to hire.</h2>
+  <div class="section-heading">
+    <span class="caps">Our recruiting process</span>
+    <h2>From the first conversation to the first day of work.</h2>
   </div>
 
   <div class="step">
-    <span class="step-number">01</span>
-
-    <h3>Tell us what you need.</h3>
-
-    <p>
-      Complete our employer inquiry with information
-      about your organization, open positions,
-      required qualifications, and preferred
-      hiring timeline.
-    </p>
+    <span>01</span>
+    <h3>Define the position</h3>
+    <p>We discuss duties, experience, qualifications, pay, location, schedule, and hiring expectations.</p>
   </div>
 
   <div class="step">
-    <span class="step-number">02</span>
-
-    <h3>Confirm the agreement.</h3>
-
-    <p>
-      We discuss the role, confirm the applicable
-      placement fee, and establish recruiting
-      responsibilities and payment terms in writing
-      before beginning the search.
-    </p>
+    <span>02</span>
+    <h3>Agree on terms</h3>
+    <p>We confirm the service scope, placement fee, and payment terms in a written agreement.</p>
   </div>
 
   <div class="step">
-    <span class="step-number">03</span>
-
-    <h3>Review potential candidates.</h3>
-
-    <p>
-      We identify and communicate with interested
-      candidates, review relevant experience,
-      and present suitable candidates for
-      your consideration with their permission.
-    </p>
+    <span>03</span>
+    <h3>Identify candidates</h3>
+    <p>We review potential matches and introduce interested candidates with their permission.</p>
   </div>
 
   <div class="step">
-    <span class="step-number">04</span>
-
-    <h3>Make the hiring decision.</h3>
-
-    <p>
-      Your business conducts interviews, makes
-      its final employment decision, extends
-      job offers, and handles onboarding
-      and employer required screening.
-    </p>
+    <span>04</span>
+    <h3>Explore hiring support</h3>
+    <p>When relevant, we help locate bonding and training program contacts for the employer to consider.</p>
   </div>
 
   <div class="step">
-    <span class="step-number">05</span>
-
-    <h3>Complete the placement.</h3>
-
-    <p>
-      Once a referred candidate starts employment,
-      the agreed placement fee is earned.
-      We invoice the employer, and payment
-      is due within seven calendar days of
-      the invoice date under our standard terms.
-    </p>
+    <span>05</span>
+    <h3>Complete the hire</h3>
+    <p>The employer completes interviews, screening, hiring, and onboarding. The agreed fee is earned when the employee starts.</p>
   </div>
-
 </section>
 
-<!-- PAYMENT AND EXPECTATIONS -->
+<!-- TERMS -->
 
 <section class="terms">
-  <div class="wrap terms-grid">
+  <div class="wrap split">
 
     <div>
-      <span class="caps">Payment and expectations</span>
-
-      <h2>Clear terms help everyone make informed decisions.</h2>
+      <span class="caps">Clear expectations</span>
+      <h2>Our responsibilities and yours.</h2>
     </div>
 
-    <div class="terms-copy">
-
+    <div class="copy">
       <p>
-        There is no upfront fee simply to submit
-        a hiring inquiry. Before recruiting begins,
-        we confirm the position, service scope,
-        placement fee, and payment conditions
-        in a written agreement.
+        Merit &amp; Momentum provides direct hire recruiting
+        and relevant program navigation. The employer retains
+        responsibility for all employment decisions,
+        compensation, screening, payroll, supervision,
+        and compliance obligations.
       </p>
-
       <p>
-        Employers pay for successful direct hire
-        placements. The placement fee is earned
-        on the employee's first day of work, and
-        payment is due within seven calendar
-        days of the invoice date under our
-        standard terms.
+        Placement fees and any agreed replacement search
+        terms are confirmed in writing. Our standard
+        payment term is seven calendar days from
+        the invoice date after the referred employee
+        begins work.
       </p>
-
       <p>
-        Employers retain responsibility for hiring
-        decisions, workplace supervision, wages,
-        payroll, and applicable employment obligations.
-        Candidates never pay for placement services.
+        Programs such as federal bonding and workforce
+        training are administered independently.
+        Eligibility, funding, insurance coverage,
+        and approvals are determined by their
+        respective agencies or providers.
       </p>
-
       <p>
-        No recruiting search guarantees a successful
-        hire. Any replacement search arrangements
-        or additional services must be expressly
-        included in the written agreement.
+        Our guidance does not replace legal, tax,
+        insurance, or professional compliance advice.
+        We cannot guarantee that an employer will
+        qualify for an incentive or that recruiting
+        will result in a successful hire.
       </p>
-
     </div>
+
   </div>
 </section>
 
@@ -933,44 +439,29 @@ footer {
 
 <section class="closing">
   <div class="wrap">
-
     <span class="caps">Merit &amp; Momentum Recruiting</span>
-
-    <h2>Ready to talk about your hiring needs?</h2>
-
+    <h2>Ready to make your next hiring decision?</h2>
     <p>
-      Tell us about the people your business
-      needs to hire. We'll discuss the position,
-      the qualifications involved, and whether
-      our direct hire recruiting services
-      are a good fit.
+      Tell us what your business needs, and we'll discuss
+      the recruiting process, applicable placement fees,
+      and resources that may support your hiring goals.
     </p>
-
-    <a href="employers.html" class="text-link">
-      Submit an employer hiring inquiry
-    </a>
-
+    <a class="link" href="employers.html#inquiry">Submit an employer inquiry</a>
   </div>
 </section>
 
 </main>
 
-<!-- SHARED FOOTER -->
-
 <footer>
   <div class="wrap footer-row">
-
     <span>© 2026 MERIT &amp; MOMENTUM RECRUITING</span>
-
     <div class="footer-links">
       <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
-
     <span>ARKANSAS / DIRECT HIRE</span>
-
   </div>
 </footer>
 
